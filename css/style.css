@@ -1,0 +1,330 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1;
+}
+
+:root {
+  font-size: 10px;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.6rem;
+  padding: 0;
+}
+
+.button {
+  padding: 13px 20px;
+  border: 1px solid #b8b8b8;
+  font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
+  font-stretch: 100%;
+  color: #111111;
+}
+
+.layout-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1680px;
+  margin: auto;
+}
+
+.section-title {
+  font: 600 7rem 'Barlow', sans-serif;
+  color: #111111;
+}
+
+.header {
+  width: 100%;
+  height: 98vh;
+  background: url("../img/home-hero-2560w.jpg") 38% 52%/105% no-repeat;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.header .header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .header-nav .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 48px 0;
+  width: 1680px;
+  margin: auto;
+}
+
+.header .header-nav .positioner .open-overlay-nav {
+  display: none;
+  font-size: 3.3rem;
+}
+
+.header .header-nav .positioner .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 2.8rem 'Barlow', sans-serif;
+  z-index: 1;
+}
+
+.header .header-nav .positioner .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
+  z-index: 1;
+}
+
+.header .header-nav .positioner .menu .item {
+  margin-left: 33px;
+  opacity: 0.7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .header-nav .positioner .menu .item:hover {
+  opacity: 1;
+}
+
+.header .header-nav .positioner .menu .item.active {
+  opacity: 1;
+}
+
+.header .layout-centered {
+  position: relative;
+  top: -7%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 10.6%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.header .layout-centered .svg-square-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header .layout-centered .description {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: relative;
+  font: 500 1.2rem 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  margin-bottom: 10px;
+}
+
+.header .layout-centered .description::before, .header .layout-centered .description::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #f73a46;
+}
+
+.header .layout-centered .description::before {
+  display: none;
+  left: -97px;
+}
+
+.header .layout-centered .description::after {
+  right: -97px;
+}
+
+.header .layout-centered .header-title {
+  font: 700 9.2rem/10.12rem 'Barlow';
+  white-space: pre-line;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.header .layout-centered .icon-down {
+  color: #fcfcfc;
+  font-size: 1.6rem;
+  margin-left: 4px;
+}
+
+.main .about-us .layout-centered .content-block .description {
+  font: 400 1.6rem/2.8rem 'Barlow', sans-serif;
+  color: #444444;
+}
+
+.main .about-us .layout-centered .content-block .features-list {
+  font: 400 2rem/3rem 'Barlow', sans-serif;
+  color: #111111;
+}
+
+@media only screen and (min-height: 1000px) {
+  .header {
+    background: url("../img/home-hero-2560w.jpg") center/cover no-repeat;
+  }
+}
+
+@media only screen and (max-width: 1680px) {
+  .layout-centered {
+    width: 100%;
+  }
+  .header .header-nav .positioner {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  .header {
+    background: url("../img/home-hero-2560w.jpg") center/cover no-repeat;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .header .header-nav {
+    height: 70px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #ffffff;
+    color: #444444;
+  }
+  .header .header-nav .positioner {
+    position: relative;
+    padding: 0px 20px 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .header .header-nav .positioner .open-overlay-nav {
+    position: absolute;
+    left: 0;
+    top: -7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #444444;
+  }
+  .header .header-nav .positioner .logo {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .header .header-nav .positioner .menu {
+    display: none;
+  }
+  .header .layout-centered .header-title {
+    font: 700 7rem/7.2rem 'Barlow';
+    white-space: normal;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    background: url("../img/home-hero-2560w.jpg") 70% 0/cover no-repeat;
+  }
+  .header .layout-centered .description {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .header .layout-centered .description:before {
+    display: block;
+  }
+  .header .layout-centered .header-title {
+    text-align: center;
+  }
+  .header .layout-centered .icon-down {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .header .layout-centered {
+    top: -3%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header .layout-centered .header-title {
+    font: 700 6rem/7.2rem 'Barlow';
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header .layout-centered .description::before, .header .layout-centered .description::after {
+    width: 60px;
+  }
+  .header .layout-centered .description::before {
+    left: -77px;
+  }
+  .header .layout-centered .description::after {
+    right: -77px;
+  }
+  .header .layout-centered .header-title {
+    font: 700 4rem/5rem 'Barlow';
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .header .layout-centered .description::before, .header .layout-centered .description::after {
+    width: 50px;
+  }
+  .header .layout-centered .description::before {
+    left: -67px;
+  }
+  .header .layout-centered .description::after {
+    right: -67px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header .layout-centered .description::before, .header .layout-centered .description::after {
+    width: 40px;
+  }
+  .header .layout-centered .description::before {
+    left: -57px;
+  }
+  .header .layout-centered .description::after {
+    right: -57px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header .layout-centered .description::before, .header .layout-centered .description::after {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
