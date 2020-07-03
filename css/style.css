@@ -18,7 +18,7 @@ button {
 }
 
 .button {
-  padding: 13px 20px;
+  padding: 9px 22px;
   border: 1px solid #b8b8b8;
   font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
   font-stretch: 100%;
@@ -36,6 +36,68 @@ button {
 .section-title {
   font: 600 7rem 'Barlow', sans-serif;
   color: #111111;
+}
+
+.is-visible {
+  opacity: 1 !important;
+}
+
+.sticky-nav {
+  display: none;
+}
+
+.sticky-nav .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 48px;
+  width: 1680px;
+  height: 80px;
+  margin: auto;
+}
+
+.sticky-nav .positioner .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 2.8rem 'Barlow', sans-serif;
+  z-index: 1;
+}
+
+.sticky-nav .positioner .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sticky-nav .positioner .menu .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
+  z-index: 1;
+}
+
+.sticky-nav .positioner .menu .list .item {
+  margin-left: 33px;
+  opacity: 0.7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.sticky-nav .positioner .menu .list .item:hover {
+  opacity: 1;
+}
+
+.sticky-nav .positioner .menu .list .item.active {
+  opacity: 1;
 }
 
 .header {
@@ -85,23 +147,29 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header .header-nav .positioner .menu .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 10px;
   font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
   z-index: 1;
 }
 
-.header .header-nav .positioner .menu .item {
+.header .header-nav .positioner .menu .list .item {
   margin-left: 33px;
   opacity: 0.7;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-.header .header-nav .positioner .menu .item:hover {
+.header .header-nav .positioner .menu .list .item:hover {
   opacity: 1;
 }
 
-.header .header-nav .positioner .menu .item.active {
+.header .header-nav .positioner .menu .list .item.active {
   opacity: 1;
 }
 
@@ -177,14 +245,57 @@ button {
   margin-left: 4px;
 }
 
-.main .about-us .layout-centered .content-block .description {
+.main .about-us {
+  opacity: 0;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+  background: url(../img/home-about-bg.svg) 18% 58%/50% no-repeat, url(../img/home-about-device.jpg) 77% 307px/27% no-repeat, url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+}
+
+.main .about-us .layout-centered {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 510px;
+  padding-left: 165px;
+}
+
+.main .about-us .layout-centered .section-title {
+  margin-bottom: 14px;
+}
+
+.main .about-us .layout-centered .description {
+  margin-bottom: 46px;
+  letter-spacing: -0.1px;
+  white-space: pre-line;
   font: 400 1.6rem/2.8rem 'Barlow', sans-serif;
   color: #444444;
 }
 
-.main .about-us .layout-centered .content-block .features-list {
+.main .about-us .layout-centered .features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 45%;
   font: 400 2rem/3rem 'Barlow', sans-serif;
   color: #111111;
+}
+
+.main .about-us .layout-centered .features-list .item {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.main .about-us .layout-centered .features-list .item:last-child {
+  margin-bottom: 48px;
+}
+
+.main .about-us .layout-centered .button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 @media only screen and (min-height: 1000px) {
@@ -206,6 +317,29 @@ button {
 @media only screen and (max-width: 1650px) {
   .header {
     background: url("../img/home-hero-2560w.jpg") center/cover no-repeat;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .main .about-us {
+    background: url(../img/home-about-bg.svg) 18% 58%/50% no-repeat, url(../img/home-about-device.jpg) 77% 250px/27% no-repeat, url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+  }
+  .main .about-us .layout-centered {
+    padding-top: 350px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .main .about-us {
+    background: url(../img/home-about-bg.svg) 18% 58%/50% no-repeat, url(../img/home-about-device.jpg) 85% 250px/27% no-repeat, url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+  }
+  .main .about-us .layout-centered {
+    padding-left: 110px;
+  }
+  .main .about-us .layout-centered .features-list .item:nth-child(1),
+  .main .about-us .layout-centered .features-list .item:nth-child(3),
+  .main .about-us .layout-centered .features-list .item:nth-child(5) {
+    padding-right: 15px;
   }
 }
 
@@ -246,6 +380,55 @@ button {
     font: 700 7rem/7.2rem 'Barlow';
     white-space: normal;
   }
+  .main .about-us {
+    background: url(../img/home-about-bg.svg) 18% 58%/50% no-repeat, url(../img/home-about-device.jpg) 85% 300px/27% no-repeat, url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main .about-us {
+    background: url(../img/home-about-bg.svg) 18% 58%/50% no-repeat, url(../img/home-about-device.jpg) 90% 250px/27% no-repeat, url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+  }
+  .main .about-us .layout-centered {
+    padding-top: 320px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main .about-us {
+    background: url(../img/home-about-bg.svg) 18% 58%/50% no-repeat, url(../img/home-about-device.jpg) 95% 250px/27% no-repeat, url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+  }
+  .main .about-us .layout-centered {
+    padding-left: 70px;
+    padding-top: 320px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .main .about-us {
+    background: url(../img/home-about-device.jpg) 50% 100px/400px no-repeat;
+  }
+  .main .about-us .layout-centered {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 720px;
+    text-align: center;
+  }
+  .main .about-us .layout-centered .section-title {
+    margin-bottom: 20px;
+  }
+  .main .about-us .layout-centered .description {
+    margin-bottom: 40px;
+    white-space: normal;
+  }
+  .main .about-us .layout-centered .features-list {
+    width: 100%;
+  }
+  .main .about-us .layout-centered .button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -271,6 +454,13 @@ button {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .main .about-us .layout-centered {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 @media only screen and (max-height: 640px) {
   .header .layout-centered {
     top: -3%;
@@ -280,6 +470,17 @@ button {
 @media only screen and (max-width: 600px) {
   .header .layout-centered .header-title {
     font: 700 6rem/7.2rem 'Barlow';
+  }
+  .main .about-us .layout-centered .features-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .main .about-us .layout-centered .features-list .item {
+    width: 100%;
   }
 }
 
@@ -299,6 +500,9 @@ button {
 }
 
 @media only screen and (max-width: 360px) {
+  .section-title {
+    font-size: 6rem;
+  }
   .header .layout-centered .description::before, .header .layout-centered .description::after {
     width: 50px;
   }
@@ -307,6 +511,10 @@ button {
   }
   .header .layout-centered .description::after {
     right: -67px;
+  }
+  .main .about-us .layout-centered {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

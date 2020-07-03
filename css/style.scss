@@ -17,7 +17,7 @@ button {
 }
 
 .button {
-    padding: 13px 20px;
+    padding: 9px 22px;
     border: 1px solid #b8b8b8;
     font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
     font-stretch: 100%;
@@ -33,6 +33,69 @@ button {
 .section-title {
     font: 600 7rem 'Barlow', sans-serif;
     color: #111111;
+}
+
+.is-visible {
+    opacity: 1 !important;
+}
+
+.sticky-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: transform .3s;
+    transform: translateY(-85px);
+    background: red;
+    height: 80px;
+
+    .positioner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 48px;
+        width: 1680px;
+        height: 80px;
+        margin: auto;
+
+        .logo {
+            display: flex;
+            font: 400 2.8rem 'Barlow', sans-serif;
+            z-index: 1;
+        }
+
+        .menu {
+            display: flex;
+
+            .list {
+                display: flex;
+                padding-top: 10px;
+                font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
+                z-index: 1;
+
+                .item {
+                    margin-left: 33px;
+                    opacity: 0.7;
+                    transition: .3s;
+                }
+
+                .item:hover {
+                    opacity: 1;
+                }
+
+                .item.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.sticky-nav.scroll {
+    display: flex !important;
+    width: 100%;
+    transform: translateY(100px);
 }
 
 .header {
@@ -66,22 +129,25 @@ button {
 
             .menu {
                 display: flex;
-                padding-top: 10px;
-                font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
-                z-index: 1;
+                .list {
+                    display: flex;
+                    padding-top: 10px;
+                    font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
+                    z-index: 1;
 
-                .item {
-                    margin-left: 33px;
-                    opacity: 0.7;
-                    transition: .3s;
-                }
+                    .item {
+                        margin-left: 33px;
+                        opacity: 0.7;
+                        transition: .3s;
+                    }
 
-                .item:hover {
-                    opacity: 1;
-                }
+                    .item:hover {
+                        opacity: 1;
+                    }
 
-                .item.active {
-                    opacity: 1;
+                    .item.active {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -153,20 +219,51 @@ button {
 
 
 .main {
-    
     .about-us {
+        opacity: 0;
+        transition: opacity 1.5s;
+        background: url(../img/home-about-bg.svg) 18% 58%/ 50% no-repeat,
+                    url(../img/home-about-device.jpg) 77% 307px/27% no-repeat,
+                    url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+
         .layout-centered {
-            .content-block {
-                .description {
-                    font: 400 1.6rem/2.8rem 'Barlow', sans-serif;
-                    color: #444444;
+            flex-direction: column;
+            padding-top: 510px;
+            padding-left: 165px;
+
+            .section-title {
+                margin-bottom: 14px;
+            }
+
+            .description {
+                margin-bottom: 46px;
+                letter-spacing: -0.1px;
+                white-space: pre-line;
+                font: 400 1.6rem/2.8rem 'Barlow', sans-serif;
+                color: #444444;
+            }
+
+            .features-list {
+                display: flex;
+                flex-wrap: wrap;
+                width: 45%;
+                font: 400 2rem/3rem 'Barlow', sans-serif;
+                color: #111111;
+
+                .item {
+                    width: 50%;
+                    margin-bottom: 10px;
                 }
 
-                .features-list {
-                    font: 400 2rem/3rem 'Barlow', sans-serif;
-                    color: #111111;
+                .item:last-child {
+                    margin-bottom: 48px;
                 }
             }
+
+            .button {
+                align-self: flex-start;
+            }
+            
         }
     }
 }
@@ -194,6 +291,42 @@ button {
 @media only screen and (max-width: 1650px) {
     .header {
         background: url('../img/home-hero-2560w.jpg') center/cover no-repeat;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .main {
+        .about-us {
+            background: url(../img/home-about-bg.svg) 18% 58%/ 50% no-repeat,
+                    url(../img/home-about-device.jpg) 77% 250px/27% no-repeat,
+                    url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+
+            .layout-centered {
+                padding-top: 350px;  
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .main {
+        .about-us {
+            background: url(../img/home-about-bg.svg) 18% 58%/ 50% no-repeat,
+                    url(../img/home-about-device.jpg) 85% 250px/27% no-repeat,
+                    url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+
+            .layout-centered {
+                padding-left: 110px; 
+                
+                .features-list {
+                    .item:nth-child(1),
+                    .item:nth-child(3),
+                    .item:nth-child(5) {
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -237,10 +370,75 @@ button {
             }
         }
     }
+
+    .main {
+        .about-us {
+            background: url(../img/home-about-bg.svg) 18% 58%/ 50% no-repeat,
+                    url(../img/home-about-device.jpg) 85% 300px/27% no-repeat,
+                    url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .main {
+        .about-us {
+            background: url(../img/home-about-bg.svg) 18% 58%/ 50% no-repeat,
+                    url(../img/home-about-device.jpg) 90% 250px/27% no-repeat,
+                    url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+
+            .layout-centered {
+                padding-top: 320px;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1000px) {
+    .main {
+        .about-us {
+            background: url(../img/home-about-bg.svg) 18% 58%/ 50% no-repeat,
+                    url(../img/home-about-device.jpg) 95% 250px/27% no-repeat,
+                    url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
 
+            .layout-centered {
+                padding-left: 70px;
+                padding-top: 320px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .main {
+        .about-us {
+            background: url(../img/home-about-device.jpg) 50% 100px/400px no-repeat;        
+
+            .layout-centered {
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-top: 720px;
+                text-align: center;
+
+                .section-title {
+                    margin-bottom: 20px;
+                }
+
+                .description {
+                    margin-bottom: 40px;
+                    white-space: normal;
+                }
+
+                .features-list {
+                    width: 100%;
+                }
+
+                .button {
+                    align-self: center;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -268,6 +466,17 @@ button {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .main {
+        .about-us {     
+            .layout-centered {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+}
+
 @media only screen and (max-height: 640px) {
     .header {
         .layout-centered {
@@ -281,6 +490,21 @@ button {
         .layout-centered {
             .header-title {
                 font: 700 6rem/7.2rem 'Barlow';
+            }
+        }
+    }
+
+    .main {
+        .about-us {      
+            .layout-centered {
+                .features-list {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+
+                    .item {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -313,6 +537,10 @@ button {
 
 
 @media only screen and (max-width: 360px) {
+    .section-title {
+        font-size: 6rem;
+    }
+
     .header {
         .layout-centered {
             .description {
@@ -328,6 +556,15 @@ button {
                 &::after {
                     right: -67px;
                 }
+            }
+        }
+    }
+
+    .main {
+        .about-us {
+            .layout-centered {
+                padding-left: 20px;
+                padding-right: 20px;
             }
         }
     }

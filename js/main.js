@@ -17,17 +17,6 @@
         elem: document.querySelector('.header .icon-down'),
         speed: 0.4,
     });
-/*
-    scrollTopOpacity({
-        elem: document.querySelector('.header .description'),
-        speed: 0.4,
-    });
-
-    scrollBottomOpacity({
-        elem: document.querySelector('.main'),
-        speed: 0.3,
-    }); */
-
 
 
     function parallaxHeaderSquare({
@@ -62,37 +51,55 @@
         })
     }
 
+}
 
 
 
+
+// Scroll opacity
+{
+    /*
+    scrollTopOpacity({
+        elem: document.querySelector('.header .description'),
+        speed: 0.4,
+    });
+
+    scrollBottomOpacity({
+        elem: document.querySelector('.main'),
+        speed: 0.3,
+    }); */
+
+    
     function scrollOpacity() {
-        let scrollItemsList = document.querySelectorAll('.scroll-opacity');
+        const items = [...document.querySelectorAll('.scroll-opacity')];
 
-        for (let item of scrollItemsList) {
+        let options = {
+            rootMargin: '0px',
+            threshold: 0.20
+        };
 
-            let itemParent = item.offsetParent;
-            let speed = item.dataset.opacitySpeed;
-            let direction = item.dataset.opacityDirection;
-
-            window.addEventListener('scroll', () => {
-                let scrollTop = item.getBoundingClientRect().top;
-
-                console.log(scrollTop);
-
-                if (direction == 'top') {
-                    
-
-                } else if (direction == 'bottom') {
-                    let opacity = scrollTop * (-speed / 100);
-                    item.style.opacity = opacity;
-
-                    //console.log(opacity);
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                const { target } = entry;
+                console.log(entry, target)
+                
+                if (entry.intersectionRatio >= 0.20) {
+                    target.classList.add("is-visible");
+                } else {
+                    target.classList.remove("is-visible");
                 }
             });
-        }
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+
+        items.forEach((item, index) => {
+            observer.observe(item);
+        });
     }
 
     scrollOpacity();
+    
 
 
 
@@ -103,8 +110,8 @@
         let elemParent = elem.offsetParent;
 
         window.addEventListener('scroll', () => {
-            let scrollTop = elemParent.getBoundingClientRect().top;
-            let opacity = scrollTop * (-speed / 100);
+            let scrollTop = elem.getBoundingClientRect().top;
+            let opacity = scrollTop * 100;
             
             console.log(opacity);
 
@@ -131,4 +138,27 @@
             elem.style.opacity = opacity;
         });
     }
+}
+
+
+
+// Sticky nav
+{
+    showStickyNav();
+
+    function showStickyNav() {
+        let stickyNav = document.querySelector('.sticky-nav');
+        let headerHeight = document.querySelector('.header').offsetHeight;
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset;
+
+            if (scrollTop >= headerHeight) {
+                stickyNav.classList.add('scroll');
+            } else {
+                stickyNav.classList.remove('scroll');
+            }
+        });
+    }
+
 }
