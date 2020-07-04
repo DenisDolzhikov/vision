@@ -146,25 +146,6 @@
 {
     showStickyNav();
 
-/*
-    stickyNav();
-
-    function stickyNav() {
-        
-        showOrDelete();
-
-        window.addEventListener('resize', showOrDelete);
-        window.addEventListener('orientationchange', showOrDelete); 
-
-        function showOrDelete() {
-            if (window.matchMedia("(max-width: 1200px)").matches) {
-                deleteStickyNav()
-            } else if (window.matchMedia("(min-width: 1200px)").matches) {
-                showStickyNav();
-            }
-        } 
-    } */
-
     function showStickyNav() {
         let stickyNav = document.querySelector('.sticky-nav');
         let headerHeight = document.querySelector('.header').offsetHeight;
@@ -180,8 +161,27 @@
         });
     }
 
-    function deleteStickyNav() {
-            document.querySelector('.sticky-nav').remove;     
-    }
+}
 
+//Overlay nav 
+{
+    overlayNav();
+
+    function overlayNav() {
+        let overlay = document.querySelector('.overlay-nav');
+        let overlayWrapper = document.querySelector('.overlay-nav-wrapper');
+        let openButtons = document.querySelectorAll('.open-overlay-nav');
+        let closeButton = document.querySelector('.close-overlay-nav');
+
+        for (let openButton of openButtons) {
+            openButton.addEventListener('click', () => {
+                overlay.classList.add('open');
+            });
+        }
+
+        closeButton.addEventListener('click', () => {
+            overlay.classList.remove('open');
+        });
+
+    }
 }
