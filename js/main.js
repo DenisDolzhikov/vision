@@ -146,6 +146,25 @@
 {
     showStickyNav();
 
+/*
+    stickyNav();
+
+    function stickyNav() {
+        
+        showOrDelete();
+
+        window.addEventListener('resize', showOrDelete);
+        window.addEventListener('orientationchange', showOrDelete); 
+
+        function showOrDelete() {
+            if (window.matchMedia("(max-width: 1200px)").matches) {
+                deleteStickyNav()
+            } else if (window.matchMedia("(min-width: 1200px)").matches) {
+                showStickyNav();
+            }
+        } 
+    } */
+
     function showStickyNav() {
         let stickyNav = document.querySelector('.sticky-nav');
         let headerHeight = document.querySelector('.header').offsetHeight;
@@ -159,6 +178,10 @@
                 stickyNav.classList.remove('scroll');
             }
         });
+    }
+
+    function deleteStickyNav() {
+            document.querySelector('.sticky-nav').remove;     
     }
 
 }
