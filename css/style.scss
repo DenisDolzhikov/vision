@@ -243,6 +243,8 @@ button {
     width: 100%;
     height: 98vh;
     background: url('../img/home-hero-2560w.jpg') 38% 52%/105% no-repeat;
+    background-position-x: 38%;
+    background-position-y: 52%;
     overflow: hidden;
     color: #ffffff;
 
@@ -561,8 +563,9 @@ button {
         .svg-square-2 {
             position: absolute;
             top: 12.4%;
-            left: 63.5%;
-            width: 26.84%;
+            left: 77.1%;
+            width: 531px;
+            height: 844px;
         }
     }
 }
@@ -664,6 +667,8 @@ button {
     }
     
     .header {
+        background: url('../img/home-hero-2560w.jpg') 70% 0/cover no-repeat;
+
         .header-nav {
             height: 70px;
             justify-content: center;
@@ -704,6 +709,10 @@ button {
             background: url(../img/home-about-bg.svg) 18% 58%/ 50% no-repeat,
                     url(../img/home-about-device.jpg) 85% 300px/27% no-repeat,
                     url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
+            
+            .layout-centered {
+                padding-bottom: 340px;
+            }
         }
     }
 }
@@ -733,6 +742,11 @@ button {
                 padding-left: 70px;
                 padding-top: 320px;
             }
+        }
+
+        .projects {
+            padding-top: 170px;
+            padding-bottom: 225px;
         }
     }
 }
@@ -771,7 +785,6 @@ button {
 
 @media only screen and (max-width: 800px) {
     .header {
-        background: url('../img/home-hero-2560w.jpg') 70% 0/cover no-repeat;
 
         .layout-centered {
             .description {

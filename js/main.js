@@ -18,11 +18,15 @@
         speed: 0.4,
     });
 
+    parallaxProjectsSquare({
+        elem: document.querySelector('.projects .svg-square-2'),
+        speed: 0.08,
+    });
+
 
     function parallaxHeaderSquare({
         elem,
         speed = 0.1,
-        direction = 'top',
     }) {
         let elemHeight = elem.offsetHeight;
         let elemParent = elem.offsetParent;
@@ -49,6 +53,26 @@
             
             elem.style.transform = `translateY(${scrollTop * -speed}px)`;
         })
+    }
+
+
+
+    function parallaxProjectsSquare({
+        elem,
+        speed = 0.1,
+    }) {
+        let elemWidth = elem.offsetWidth;
+        let elemParent = elem.offsetParent;
+
+        window.addEventListener('scroll', makeParallax);
+        window.addEventListener('DOMContentLoaded', makeParallax);
+
+        function makeParallax() {
+            let scrollTop = elemParent.getBoundingClientRect().top;
+            //console.log( (elemWidth/2) + (-scrollTop / 3 * -speed ) );
+
+            elem.style.transform = `translateX(-${(elemWidth/2) + (-scrollTop / 3 * -speed)}px)`;
+        }
     }
 
 }
@@ -123,7 +147,7 @@
             let scrollTop = elemParent.getBoundingClientRect().top;
             let opacity = scrollTop * (-speed / 100);
             
-            console.log(opacity);
+            //console.log(opacity);
 
             elem.style.opacity =  1 - opacity;
         })
@@ -203,7 +227,7 @@ let projectSlider = new Swiper('.projects .projects-slider', {
     loop: true,
     slidesPerView: 3,
     slidesPerGroup: 3,
-    spaceBetween: 70,
+    spaceBetween: 40,
     speed: 600,
 
     pagination: {
@@ -218,5 +242,12 @@ let projectSlider = new Swiper('.projects .projects-slider', {
 
     debugger: true,
 
-
+    breakpoints: {
+        1050: {
+            spaceBetween: 50,
+        },
+        1550: {
+            spaceBetween: 70,
+        },
+    }
 });
