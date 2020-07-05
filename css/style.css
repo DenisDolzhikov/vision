@@ -83,6 +83,10 @@ button {
   border-bottom: 1px solid #bb2d35;
 }
 
+.page {
+  overflow: hidden;
+}
+
 .layout-centered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,6 +96,7 @@ button {
 }
 
 .section-title {
+  letter-spacing: 0.5px;
   font: 600 7rem 'Barlow', sans-serif;
   color: #111111;
 }
@@ -458,7 +463,7 @@ button {
           flex-direction: column;
   padding-top: 510px;
   padding-left: 165px;
-  padding-bottom: 350px;
+  padding-bottom: 492px;
 }
 
 .main .about-us .layout-centered .section-title {
@@ -499,7 +504,171 @@ button {
 }
 
 .main .projects {
-  background: #0c0c0c;
+  position: relative;
+  padding-top: 205px;
+  padding-bottom: 247px;
+  background: #131313;
+}
+
+.main .projects .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1400px;
+  padding: 0 25px;
+  margin: 0 auto 134px auto;
+}
+
+.main .projects .positioner .section-title {
+  color: #ffffff;
+}
+
+.main .projects .positioner .button {
+  color: #ffffff;
+  border-color: #ffffff;
+  z-index: 1;
+}
+
+.main .projects .positioner .button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.main .projects .projects-slider {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.main .projects .projects-slider .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.main .projects .projects-slider .swiper-slide .image source,
+.main .projects .projects-slider .swiper-slide .image img {
+  width: 100%;
+}
+
+.main .projects .projects-slider .swiper-slide .overflow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.65);
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  color: #ffffff;
+}
+
+.main .projects .projects-slider .swiper-slide .overflow .title,
+.main .projects .projects-slider .swiper-slide .overflow .description {
+  -webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+  transition: opacity 0.6s, -webkit-transform 0.6s;
+  transition: opacity 0.6s, transform 0.6s;
+  transition: opacity 0.6s, transform 0.6s, -webkit-transform 0.6s;
+}
+
+.main .projects .projects-slider .swiper-slide .overflow .title {
+  margin-bottom: 15px;
+  font: 500 3.6rem 'Barlow', sans-serif;
+  opacity: 0;
+}
+
+.main .projects .projects-slider .swiper-slide .overflow .description {
+  margin-top: 15px;
+  font: 400 1.6rem 'Barlow', sans-serif;
+  opacity: 0;
+}
+
+.main .projects .projects-slider .swiper-slide .overflow:hover {
+  opacity: 1;
+}
+
+.main .projects .projects-slider .swiper-slide .overflow:hover .title,
+.main .projects .projects-slider .swiper-slide .overflow:hover .description {
+  opacity: 1;
+}
+
+.main .projects .projects-slider .swiper-slide .overflow:hover .title {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.main .projects .projects-slider .swiper-slide .overflow:hover .description {
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
+}
+
+.main .projects .projects-slider .swiper-button-prev,
+.main .projects .projects-slider .swiper-button-next {
+  font-size: 2.2rem;
+  color: #ffffff;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.main .projects .projects-slider .swiper-button-prev::after,
+.main .projects .projects-slider .swiper-button-next::after {
+  display: none;
+}
+
+.main .projects .projects-slider .swiper-pagination {
+  position: absolute;
+  left: 0;
+  bottom: -44px;
+}
+
+.main .projects .projects-slider .swiper-pagination .swiper-pagination-bullet {
+  margin-right: 7px;
+  padding: 5px;
+  background: none;
+  border: 1px solid gray;
+}
+
+.main .projects .projects-slider .swiper-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+  border-color: white;
+  opacity: 0.5;
+}
+
+.main .projects .projects-slider .swiper-pagination .swiper-pagination-bullet-active {
+  border-color: #af3840;
+}
+
+.main .projects .projects-slider:hover .swiper-button-prev,
+.main .projects .projects-slider:hover .swiper-button-next {
+  opacity: 0.7;
+}
+
+.main .projects .svg-square-2 {
+  position: absolute;
+  top: 12.4%;
+  left: 63.5%;
+  width: 26.84%;
 }
 
 @media only screen and (min-height: 1000px) {
@@ -530,6 +699,13 @@ button {
   }
   .main .about-us .layout-centered {
     padding-top: 350px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .main .projects .positioner {
+    width: 100%;
+    padding: 0 35px;
   }
 }
 
