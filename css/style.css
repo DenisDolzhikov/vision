@@ -4,6 +4,14 @@
   line-height: 1;
 }
 
+*::-moz-selection {
+  background: #ff434c;
+}
+
+*::selection {
+  background: #ff434c;
+}
+
 :root {
   font-size: 10px;
 }
@@ -693,6 +701,185 @@ button {
   height: 844px;
 }
 
+.main .our-clients {
+  padding-top: 210px;
+  padding-bottom: 200px;
+}
+
+.main .our-clients .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1400px;
+  padding: 0 25px;
+  margin: auto;
+}
+
+.main .our-clients .positioner .section-title {
+  width: 50%;
+  word-spacing: 2.5px;
+  letter-spacing: 1px;
+  font-size: 5.3rem;
+  margin-bottom: 153px;
+}
+
+.main .our-clients .positioner .description {
+  width: 50%;
+  padding-left: 19px;
+  white-space: pre-line;
+  font: 400 1.6rem/2.6rem 'Barlow', sans-serif;
+  color: #444444;
+}
+
+.main .our-clients .positioner .clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.main .our-clients .positioner .clients-list .client {
+  width: 20%;
+  text-align: center;
+}
+
+.main .our-clients .positioner .clients-list .client .image {
+  position: relative;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(1) {
+  margin-bottom: 85px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(1) .image {
+  width: 90px;
+  left: -27px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(2) .image {
+  width: 115px;
+  top: -9px;
+  left: -11px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(3) .image {
+  width: 125px;
+  top: 5px;
+  left: 3px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(4) .image {
+  width: 125px;
+  top: 5px;
+  left: 15px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(5) .image {
+  width: 105px;
+  left: 27px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(6) {
+  margin-bottom: 80px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(6) .image {
+  width: 115px;
+  top: 2px;
+  left: -27px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(7) .image {
+  width: 120px;
+  left: -15px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(8) .image {
+  width: 110px;
+  top: 3px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(9) .image {
+  width: 120px;
+  left: 15px;
+  top: 2px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(10) .image {
+  width: 145px;
+  left: 30px;
+  top: -3px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(11) .image {
+  width: 115px;
+  left: -25px;
+  top: -1px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(12) .image {
+  width: 140px;
+  left: -15px;
+  top: -2px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(13) .image {
+  width: 160px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(14) .image {
+  width: 125px;
+  left: 15px;
+  top: -3px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(15) {
+  margin-bottom: 294px;
+}
+
+.main .our-clients .positioner .clients-list .client:nth-child(15) .image {
+  width: 145px;
+  left: 30px;
+  top: -1px;
+}
+
+.main .our-clients .positioner .clients-reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  color: #111111;
+}
+
+.main .our-clients .positioner .clients-reviews .title {
+  width: 50%;
+  font: 400 2.8rem 'Barlow', sans-serif;
+}
+
+.main .our-clients .positioner .clients-reviews .description {
+  width: 50%;
+  padding-top: 5px;
+  margin-bottom: 13px;
+  font: italic 400 2.4rem/3.4rem 'Barlow', sans-serif;
+}
+
+.main .our-clients .positioner .clients-reviews .author {
+  width: 50%;
+  padding-left: 25px;
+  letter-spacing: 0px;
+  font: italic 400 1.6rem 'Barlow', sans-serif;
+  color: #444444;
+}
+
 @media only screen and (min-height: 1000px) {
   .header {
     background: url("../img/home-hero-2560w.jpg") center/cover no-repeat;
@@ -728,6 +915,10 @@ button {
   .main .projects .positioner {
     width: 100%;
     padding: 0 35px;
+  }
+  .main .our-clients .positioner {
+    padding: 35px;
+    width: 100%;
   }
 }
 

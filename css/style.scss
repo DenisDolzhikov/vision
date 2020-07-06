@@ -3,6 +3,10 @@
     line-height: 1;
 }
 
+*::selection {
+    background: #ff434c;
+}
+
 :root {
     font-size: 10px;
 }
@@ -573,6 +577,197 @@ button {
             height: 844px;
         }
     }
+
+    .our-clients {
+        padding-top: 210px;
+        padding-bottom: 200px;
+
+        .positioner {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1400px;
+            padding: 0 25px;
+            margin: auto;
+
+            .section-title {
+                width: 50%;
+                word-spacing: 2.5px;
+                letter-spacing: 1px;
+                font-size: 5.3rem;
+                margin-bottom: 153px;
+            }
+
+            .description {
+                width: 50%;
+                padding-left: 19px;
+                white-space: pre-line;
+                font: 400 1.6rem/2.6rem 'Barlow', sans-serif;
+                color: #444444;
+            }
+
+            .clients-list {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .client {
+                    width: 20%;
+                    text-align: center;
+
+                    .image {
+                        position: relative;
+                    }
+                }
+
+                .client:nth-child(1) {
+                    .image {
+                        width: 90px;
+                        left: -27px;
+                    }
+                    margin-bottom: 85px;
+                }
+
+                .client:nth-child(2) {
+                    .image {
+                        width: 115px;
+                        top: -9px;
+                        left: -11px;
+                    }
+                }
+
+                .client:nth-child(3) {
+                    .image {
+                        width: 125px;
+                        top: 5px;
+                        left: 3px;
+                    }
+                }
+
+                .client:nth-child(4) {
+                    .image {
+                        width: 125px;
+                        top: 5px;
+                        left: 15px;
+                    }
+                }
+
+                .client:nth-child(5) {
+                    .image {
+                        width: 105px;
+                        left: 27px;
+                    }
+                }
+
+                .client:nth-child(6) {
+                    margin-bottom: 80px;
+
+                    .image {
+                        width: 115px;
+                        top: 2px;
+                        left: -27px;
+                    }
+                }
+
+                .client:nth-child(7) {
+                    .image {
+                        width: 120px;
+                        left: -15px;
+                    }
+                }
+
+                .client:nth-child(8) {
+                    .image {
+                        width: 110px;
+                        top: 3px;
+                    }
+                }
+
+                .client:nth-child(9) {
+                    .image {
+                        width: 120px;
+                        left: 15px;
+                        top: 2px;
+                    }
+                }
+
+                .client:nth-child(10) {
+                    .image {
+                        width: 145px;
+                        left: 30px;
+                        top: -3px;
+                    }
+                }
+
+                .client:nth-child(11) {
+                    .image {
+                        width: 115px;
+                        left: -25px;
+                        top: -1px;
+                    }
+                }
+
+                .client:nth-child(12) {
+                    .image {
+                        width: 140px;
+                        left: -15px;
+                        top: -2px;
+                    }
+                }
+
+                .client:nth-child(13) {
+                    .image {
+                        width: 160px;
+                    }
+                }
+
+                .client:nth-child(14) {
+                    .image {
+                        width: 125px;
+                        left: 15px;
+                        top: -3px;
+                    }
+                }
+
+                .client:nth-child(15) {
+                    margin-bottom: 294px;
+
+                    .image {
+                        width: 145px;
+                        left: 30px;
+                        top: -1px;
+                    }
+                }
+            }
+
+            .clients-reviews {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                width: 100%;
+                color: #111111;
+
+                .title {
+                    width: 50%;
+                    font: 400 2.8rem 'Barlow', sans-serif;
+                }
+
+                .description {
+                    width: 50%;
+                    padding-top: 5px;
+                    margin-bottom: 13px;
+                    font: italic 400 2.4rem/3.4rem 'Barlow', sans-serif;
+                }
+
+                .author {
+                    width: 50%;
+                    padding-left: 25px;
+                    letter-spacing: 0px;
+                    font: italic 400 1.6rem 'Barlow', sans-serif;
+                    color: #444444;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-height: 1000px) {
@@ -621,6 +816,13 @@ button {
             .positioner {
                 width: 100%;
                 padding: 0 35px;
+            }
+        }
+
+        .our-clients {
+            .positioner {
+                padding: 35px;
+                width: 100%;
             }
         }
     }
