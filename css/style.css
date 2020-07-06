@@ -127,29 +127,7 @@ button {
   padding-top: 12.3%;
   background: #ffffff;
   font: 400 2.8rem 'Barlow', sans-serif;
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
   overflow: auto;
-  -webkit-animation: 0.3s opacityAnimation;
-          animation: 0.3s opacityAnimation;
-}
-
-@-webkit-keyframes opacityAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes opacityAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .overlay-nav .overlay-nav-wrapper .close-overlay-nav {
@@ -203,6 +181,52 @@ button {
 .overlay-nav .overlay-nav-wrapper .menu .list .item:nth-child(4),
 .overlay-nav .overlay-nav-wrapper .menu .list .item:nth-child(5) {
   font-size: 1.6rem;
+}
+
+.overlay-nav .overlay-nav-wrapper.fade-in {
+  -webkit-animation: 0.3s opacityIn;
+          animation: 0.3s opacityIn;
+}
+
+@-webkit-keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay-nav .overlay-nav-wrapper.fade-out {
+  -webkit-animation: 0.3s opacityOut;
+          animation: 0.3s opacityOut;
+}
+
+@-webkit-keyframes opacityOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacityOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .overlay-nav.open {

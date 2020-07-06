@@ -210,11 +210,15 @@
         for (let openButton of openButtons) {
             openButton.addEventListener('click', () => {
                 overlay.classList.add('open');
+                overlayWrapper.classList.add('fade-in');
+                overlayWrapper.classList.remove('fade-out');
             });
         }
 
         closeButton.addEventListener('click', () => {
-            overlay.classList.remove('open');
+            overlayWrapper.classList.add('fade-out');
+            overlayWrapper.classList.remove('fade-in');
+            setTimeout(() => overlay.classList.remove('open'), 300);
         });
 
     }

@@ -107,14 +107,8 @@ button {
         padding-top: 12.3%;
         background: #ffffff;
         font: 400 2.8rem 'Barlow', sans-serif;
-        transition: opacity 2s;
+        //transition: opacity 2s;
         overflow: auto;
-        animation: 0.3s opacityAnimation;
-
-        @keyframes opacityAnimation {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
 
         .close-overlay-nav {
             display: block;
@@ -160,6 +154,24 @@ button {
                     font-size: 1.6rem;
                 }
             }
+        }
+    }
+
+    .overlay-nav-wrapper.fade-in {
+        animation: 0.3s opacityIn;
+
+        @keyframes opacityIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    }
+
+    .overlay-nav-wrapper.fade-out {
+        animation: 0.3s opacityOut;
+
+        @keyframes opacityOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
         }
     }
 }
