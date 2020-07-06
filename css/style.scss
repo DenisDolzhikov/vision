@@ -582,6 +582,10 @@ button {
         padding-top: 210px;
         padding-bottom: 200px;
 
+        .our-clients-slider {
+            display: none;
+        }
+
         .positioner {
             display: flex;
             flex-wrap: wrap;
@@ -594,11 +598,35 @@ button {
                 word-spacing: 2.5px;
                 letter-spacing: 1px;
                 font-size: 5.3rem;
-                margin-bottom: 153px;
+
+                .text {
+                    position: relative;
+
+                    &::after,
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        width: 80px;
+                        height: 2px;
+                        background: #f73a46;
+                    }
+
+                    &::before {
+                        display: none;
+                        left: -98px;
+                    }
+
+                    &::after {
+                        display: block;
+                        right: -98px;
+                    }
+                }
             }
 
             .description {
                 width: 50%;
+                margin-bottom: 165px;
                 padding-left: 19px;
                 white-space: pre-line;
                 font: 400 1.6rem/2.6rem 'Barlow', sans-serif;
@@ -935,6 +963,14 @@ button {
                 padding-top: 320px;
             }
         }
+
+        .our-clients {
+            .positioner {
+                .description {
+                    white-space: normal;
+                }
+            }
+        }
     }
 }
 
@@ -954,6 +990,26 @@ button {
         .projects {
             padding-top: 170px;
             padding-bottom: 225px;
+        }
+
+        .our-clients {
+            .positioner {
+                .clients-list {
+                    .client {
+                        width: 33.3%;
+
+                        .image {
+                            position: static;
+                        }
+                    }
+
+                    .client:nth-child(6),
+                    .client:nth-child(7),
+                    .client:nth-child(10) {
+                        margin-bottom: 85px;
+                    }
+                }
+            }
         }
     }
 }
@@ -990,6 +1046,55 @@ button {
 
                 .button {
                     align-self: center;
+                }
+            }
+        }
+
+        .our-clients {
+            padding-top: 180px;
+
+            .positioner {
+                .section-title {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    text-align: center;
+
+                    .text {
+                        &::before {
+                            display: block;
+                        }
+                    }
+                }
+
+                .description {
+                    width: 100%;
+                    padding: 0;
+                    text-align: center;
+                }
+
+                .clients-list {
+                    .client:nth-child(15) {
+                        margin-bottom: 240px;
+                    }
+                }
+
+                .clients-reviews {
+                    text-align: center;
+
+                    .title {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+
+                    .description {
+                        padding: 0;
+                        width: 100%;
+                    }
+
+                    .author {
+                        width: 100%;
+                        padding: 0;
+                    }
                 }
             }
         }
@@ -1070,6 +1175,19 @@ button {
                 top: 17%;
             }
         }
+
+        .our-clients {
+            padding-top: 105px;
+            padding-bottom: 100px;
+
+            .positioner {
+                .clients-list {
+                    .client:nth-child(15) {
+                        margin-bottom: 190px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1125,6 +1243,64 @@ button {
                 padding-right: 10px;
             }
         }
+
+        .our-clients {
+            .positioner {
+
+                .description {
+                    margin-bottom: 100px;
+                }
+
+                .our-clients-slider {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: 150px;
+
+                    .swiper-slide {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        overflow: hidden;
+                        
+                        .clients {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            .client {
+                                width: 50%;
+                                text-align: center;
+                            }
+
+                            .client:nth-child(1) {
+                                margin-bottom: 40px;
+                            }
+                        }
+                    }
+
+                    .swiper-pagination {
+                        position: absolute;
+                        bottom: -40px;
+
+                        .swiper-pagination-bullet {
+                            margin-right: 7px;
+                            padding: 3px;
+                            background: none;
+                            opacity: 0.3;
+                            background: #444444;
+                        }
+
+                        .swiper-pagination-bullet-active {
+                            background: #af3840;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+
+                .clients-list {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -1156,6 +1332,51 @@ button {
             padding-top: 80px;
             padding-bottom: 130px;
         }
+
+        .our-clients {
+            padding-top: 60px;
+            padding-bottom: 70px;
+            
+            .positioner {
+                .section-title {
+                    font-size: 4rem;
+
+                    .text {
+                        &::before,
+                        &::after {
+                            width: 60px;
+                        }
+
+                        &::before {
+                            left: -78px;
+                        }
+
+                        &::after {
+                            right: -78px;
+                        }
+                    }
+                }
+
+                .our-clients-slider {
+                    margin-bottom: 110px;
+
+                    .swiper-slide {
+                        padding: 0;
+
+                        .clients {
+                            .client {
+                                width: 100%;
+                                margin-bottom: 40px;
+                            }
+                        }
+                    }
+
+                    .swiper-pagination {
+                        bottom: 15px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1182,6 +1403,30 @@ button {
             }
         }
     }
+
+    .main {
+        .our-clients {
+            .positioner {
+                .section-title {
+                    .text {
+                        &::before,
+                        &::after {
+                            width: 40px;
+                        }
+
+                        &::before {
+                            left: -58px;
+                        }
+
+                        &::after {
+                            right: -58px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 
@@ -1230,28 +1475,22 @@ button {
             .description {
                 &::before,
                 &::after {
-                    width: 40px;
-                }
-
-                &::before {
-                    left: -57px;
-                }
-    
-                &::after {
-                    right: -57px;
+                    display: none;
                 }
             }
         }
     }
-}
 
-@media only screen and (max-width: 320px) { 
-    .header {
-        .layout-centered {
-            .description {
-                &::before,
-                &::after {
-                    display: none;
+    .main {
+        .our-clients {
+            .positioner {
+                .section-title {
+                    .text {
+                        &::before,
+                        &::after {
+                            display: none;
+                        }
+                    }
                 }
             }
         }

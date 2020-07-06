@@ -266,3 +266,28 @@ let projectSlider = new Swiper('.projects .projects-slider', {
         },
     }
 });
+
+let ourClientsSlider = new Swiper('.our-clients .our-clients-slider', {
+    init: false,
+    loop: true,
+    speed: 600,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+
+    pagination: {
+        el: '.our-clients .our-clients-slider .swiper-pagination',
+        clickable: true,
+    },
+
+    debugger: true,
+});
+
+function ourClientsSliderInit() {
+    if (window.matchMedia("(max-width: 600px)").matches) {
+        ourClientsSlider.init();
+    }
+}
+
+window.addEventListener('DOMContentLoaded', ourClientsSliderInit);
+window.addEventListener('resize', ourClientsSliderInit);
+window.addEventListener('orientationchange', ourClientsSliderInit);
