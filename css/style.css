@@ -813,6 +813,9 @@ button {
 }
 
 @media only screen and (max-width: 900px) {
+  .section-title {
+    font-size: 5.5rem;
+  }
   .main .about-us {
     background: url(../img/home-about-device.jpg) 50% 100px/400px no-repeat;
   }
@@ -820,6 +823,7 @@ button {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 720px;
+    padding-bottom: 220px;
     text-align: center;
   }
   .main .about-us .layout-centered .section-title {
@@ -857,12 +861,39 @@ button {
         align-self: center;
     margin-left: 0;
   }
+  .main .about-us .layout-centered {
+    padding-bottom: 180px;
+  }
+  .main .projects {
+    padding-top: 150px;
+    padding-bottom: 210px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
   .main .about-us .layout-centered {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .main .projects {
+    padding-top: 105px;
+    padding-bottom: 170px;
+  }
+  .main .projects .positioner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .projects .positioner .section-title {
+    margin-bottom: 30px;
+  }
+  .main .projects .projects-slider .swiper-button-prev,
+  .main .projects .projects-slider .swiper-button-next {
+    display: none;
+  }
+  .main .projects .svg-square-2 {
+    top: 17%;
   }
 }
 
@@ -873,6 +904,10 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
+  .section-title {
+    text-align: center;
+    font-size: 5rem;
+  }
   .header .layout-centered .header-title {
     font: 700 6rem/7.2rem 'Barlow';
   }
@@ -887,6 +922,10 @@ button {
   .main .about-us .layout-centered .features-list .item {
     width: 100%;
   }
+  .main .projects .positioner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -898,6 +937,13 @@ button {
   }
   .header .header-nav {
     height: 60px;
+  }
+  .main .about-us .layout-centered {
+    padding-bottom: 110px;
+  }
+  .main .projects {
+    padding-top: 80px;
+    padding-bottom: 130px;
   }
 }
 
@@ -917,9 +963,6 @@ button {
 }
 
 @media only screen and (max-width: 360px) {
-  .section-title {
-    font-size: 6rem;
-  }
   .sticky-nav {
     height: 50px;
   }

@@ -225,10 +225,10 @@
 
 let projectSlider = new Swiper('.projects .projects-slider', {
     loop: true,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 40,
     speed: 600,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
 
     pagination: {
         el: '.projects .projects-slider .swiper-pagination',
@@ -243,11 +243,21 @@ let projectSlider = new Swiper('.projects .projects-slider', {
     debugger: true,
 
     breakpoints: {
+        
+        700: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 40,
+        },
         1050: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
             spaceBetween: 50,
         },
         1550: {
             spaceBetween: 70,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
         },
     }
 });
