@@ -203,22 +203,23 @@
 
     function overlayNav() {
         let overlay = document.querySelector('.overlay-nav');
-        let overlayWrapper = document.querySelector('.overlay-nav-wrapper');
         let openButtons = document.querySelectorAll('.open-overlay-nav');
         let closeButton = document.querySelector('.close-overlay-nav');
 
         for (let openButton of openButtons) {
             openButton.addEventListener('click', () => {
                 overlay.classList.add('open');
-                overlayWrapper.classList.add('fade-in');
-                overlayWrapper.classList.remove('fade-out');
+                overlay.classList.add('fade-in');
+                overlay.classList.remove('fade-out');
+                document.body.style.overflowY = 'hidden';
             });
         }
 
         closeButton.addEventListener('click', () => {
-            overlayWrapper.classList.add('fade-out');
-            overlayWrapper.classList.remove('fade-in');
+            overlay.classList.add('fade-out');
+            overlay.classList.remove('fade-in');
             setTimeout(() => overlay.classList.remove('open'), 300);
+            document.body.style.overflowY = '';
         });
 
     }
