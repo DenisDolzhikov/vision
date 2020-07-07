@@ -91,6 +91,12 @@ button {
   border-bottom: 1px solid #bb2d35;
 }
 
+.no-opacity {
+  opacity: 0;
+  -webkit-transition: opacity 1.2s;
+  transition: opacity 1.2s;
+}
+
 .page {
   overflow: hidden;
 }
@@ -139,7 +145,12 @@ button {
   top: 20px;
   right: 20px;
   font-size: 1.6rem;
-  color: red;
+  color: #aaaaaa;
+  opacity: 0.6;
+}
+
+.overlay-nav .close-overlay-nav:hover {
+  opacity: 1;
 }
 
 .overlay-nav .menu {
@@ -479,9 +490,8 @@ button {
 }
 
 .main .about-us {
-  opacity: 0;
-  -webkit-transition: opacity 1.5s;
-  transition: opacity 1.5s;
+  -webkit-transition: opacity 1.5s !important;
+  transition: opacity 1.5s !important;
   background: url(../img/home-about-bg.svg) 18% 58%/50% no-repeat, url(../img/home-about-device.jpg) 77% 307px/27% no-repeat, url(../img/home-about-texture.svg) 77% 90%/30% no-repeat;
 }
 
@@ -536,7 +546,7 @@ button {
   position: relative;
   padding-top: 205px;
   padding-bottom: 247px;
-  background: #131313;
+  background: linear-gradient(5deg, #1e1e1e 0, #111 100%);
 }
 
 .main .projects .positioner {
@@ -575,6 +585,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  z-index: 5;
 }
 
 .main .projects .projects-slider .swiper-slide {
@@ -668,11 +679,12 @@ button {
 
 .main .projects .projects-slider .swiper-pagination {
   position: absolute;
-  left: 0;
   bottom: -44px;
+  pointer-events: none;
 }
 
 .main .projects .projects-slider .swiper-pagination .swiper-pagination-bullet {
+  pointer-events: auto;
   margin-right: 7px;
   padding: 5px;
   background: none;

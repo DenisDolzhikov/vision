@@ -97,41 +97,44 @@
         elem: document.querySelector('.header .icon-down'),
         speed: 0.1,
     });
+
     
-/*
-    scrollBottomOpacity({
-        elem: document.querySelector('.main'),
-        speed: 0.3,
-    });  */
 
     scrollOpacity();
     
     function scrollOpacity() {
-        const items = [...document.querySelectorAll('.scroll-opacity')];
 
-        let options = {
-            rootMargin: '0px',
-            threshold: 0.20
-        };
-
-        const callback = (entries, observer) => {
-            entries.forEach(entry => {
-                const { target } = entry;
-                console.log(entry, target)
-                
-                if (entry.intersectionRatio >= 0.20) {
-                    target.classList.add("is-visible");
-                } else {
-                    target.classList.remove("is-visible");
-                }
+        if (('IntersectionObserver' in window)) {
+            document.querySelectorAll('.scroll-opacity').forEach(item => {
+                item.classList.add('no-opacity');
             });
-        };
 
-        const observer = new IntersectionObserver(callback, options);
+            const items = [...document.querySelectorAll('.scroll-opacity')];
 
-        items.forEach((item, index) => {
-            observer.observe(item);
-        });
+            let options = {
+                rootMargin: '0px',
+                threshold: 0.20
+            };
+
+            const callback = (entries, observer) => {
+                entries.forEach(entry => {
+                    const { target } = entry;
+                    console.log(entry, target)
+                    
+                    if (entry.intersectionRatio >= 0.20) {
+                        target.classList.add("is-visible");
+                    } else {
+                        target.classList.remove("is-visible");
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(callback, options);
+
+            items.forEach((item, index) => {
+                observer.observe(item);
+            });
+        }
     }
     
 
