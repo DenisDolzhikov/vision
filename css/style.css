@@ -703,7 +703,7 @@ button {
 
 .main .our-clients {
   padding-top: 210px;
-  padding-bottom: 200px;
+  padding-bottom: 195px;
 }
 
 .main .our-clients .our-clients-slider {
@@ -907,6 +907,154 @@ button {
   color: #444444;
 }
 
+.footer {
+  padding-top: 260px;
+  padding-bottom: 205px;
+  background: url("../img/home-contact-texture.svg") 27.14% 41%/390px 272px no-repeat, linear-gradient(5deg, #1e1e1e 0, #111111 100%);
+  color: #ffffff;
+}
+
+.footer .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1400px;
+  padding: 0 25px;
+  margin: auto;
+}
+
+.footer .positioner .section-title {
+  width: 50%;
+  padding-top: 17px;
+  padding-left: 40px;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.footer .positioner .section-title .link {
+  white-space: pre-line;
+  -webkit-text-decoration: solid underline;
+          text-decoration: solid underline;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.footer .positioner .section-title .link:hover {
+  opacity: 0.5;
+}
+
+.footer .positioner .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  margin-bottom: 127px;
+  padding-left: 20px;
+}
+
+.footer .positioner .contacts .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin-bottom: 22px;
+}
+
+.footer .positioner .contacts .address .title {
+  margin-bottom: 20px;
+  font: 400 2.8rem 'Barlow', sans-serif;
+}
+
+.footer .positioner .contacts .address .description {
+  opacity: 0.7;
+  white-space: pre-line;
+  font: 400 1.6rem/2.7rem 'Barlow', sans-serif;
+}
+
+.footer .positioner .contacts .address-2 {
+  padding-left: 20px;
+}
+
+.footer .positioner .contacts .tel-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.footer .positioner .contacts .tel-mail .tel {
+  margin-bottom: 5px;
+  font: 400 2.4rem 'Barlow', sans-serif;
+}
+
+.footer .positioner .contacts .tel-mail .mail {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font: 400 1.6rem 'Barlow', sans-serif;
+  text-decoration: underline;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.footer .positioner .contacts .tel-mail .mail:hover {
+  opacity: 0.5;
+}
+
+.footer .positioner .contacts .tel-mail-2 {
+  padding-left: 20px;
+}
+
+.footer .positioner .note {
+  width: 50%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.footer .positioner .note .title {
+  font: 400 2.4rem 'Barlow', sans-serif;
+}
+
+.footer .positioner .note .definition {
+  font: 400 1.6rem 'Barlow', sans-serif;
+  opacity: 0.7;
+}
+
+.footer .positioner .social-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1.9rem;
+  width: 50%;
+  padding-top: 8px;
+  padding-left: 32px;
+}
+
+.footer .positioner .social-bar .item {
+  margin-right: 33px;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.footer .positioner .social-bar .item:hover {
+  opacity: 0.5;
+}
+
 @media only screen and (min-height: 1000px) {
   .header {
     background: url("../img/home-hero-2560w.jpg") center/cover no-repeat;
@@ -946,6 +1094,10 @@ button {
   .main .our-clients .positioner {
     padding: 35px;
     width: 100%;
+  }
+  .footer .positioner {
+    width: 100%;
+    padding: 0 35px;
   }
 }
 
@@ -1061,6 +1213,60 @@ button {
   .main .our-clients .positioner .clients-list .client:nth-child(10) {
     margin-bottom: 85px;
   }
+  .footer {
+    padding-top: 170px;
+    padding-bottom: 140px;
+    background: linear-gradient(5deg, #1e1e1e 0, #111111 100%);
+  }
+  .footer .positioner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .positioner .section-title {
+    margin-bottom: 80px;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+    background: url("../img/home-contact-texture.svg") center no-repeat;
+  }
+  .footer .positioner .section-title .link {
+    white-space: normal;
+  }
+  .footer .positioner .contacts {
+    width: auto;
+    padding: 0;
+    margin: 0 auto 55px auto;
+    text-align: center;
+  }
+  .footer .positioner .contacts .address-2 {
+    padding: 0;
+  }
+  .footer .positioner .contacts .tel-mail .mail {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  .footer .positioner .contacts .tel-mail-2 {
+    padding: 0;
+  }
+  .footer .positioner .note {
+    width: auto;
+    text-align: center;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer .positioner .social-bar {
+    margin: 0 auto 40px auto;
+    width: auto;
+    padding: 0;
+  }
+  .footer .positioner .social-bar .item {
+    margin-right: 20px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -1155,6 +1361,13 @@ button {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding-top: 135px;
+    padding-bottom: 115px;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .main .about-us .layout-centered {
     padding-left: 30px;
@@ -1192,6 +1405,37 @@ button {
 @media only screen and (max-height: 640px) {
   .header .layout-centered {
     top: -3%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .footer .positioner .contacts {
+    margin-bottom: 65px;
+  }
+  .footer .positioner .contacts .address,
+  .footer .positioner .contacts .tel-mail {
+    width: 100%;
+  }
+  .footer .positioner .contacts .addres-1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer .positioner .contacts .tel-mail-1 {
+    margin-bottom: 22px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .footer .positioner .contacts .address-2 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .footer .positioner .contacts .tel-mail-2 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
 

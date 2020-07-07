@@ -580,7 +580,7 @@ button {
 
     .our-clients {
         padding-top: 210px;
-        padding-bottom: 200px;
+        padding-bottom: 195px;
 
         .our-clients-slider {
             display: none;
@@ -798,6 +798,127 @@ button {
     }
 }
 
+.footer {
+    padding-top: 260px;
+    padding-bottom: 205px;
+    background: url('../img/home-contact-texture.svg') 27.14% 41%/390px 272px no-repeat, 
+                linear-gradient(5deg,#1e1e1e 0,#111111 100%);
+    color: #ffffff;
+
+    .positioner {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1400px;
+        padding: 0 25px;
+        margin: auto;
+
+        .section-title {
+            width: 50%;
+            padding-top: 17px;
+            padding-left: 40px;
+            color: #ffffff;
+            line-height: 1.1;
+            
+            .link {
+                white-space: pre-line;
+                text-decoration: solid underline;
+                transition: opacity .3s;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            margin-bottom: 127px;
+            padding-left: 20px;
+
+            .address {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin-bottom: 22px;
+
+                .title {
+                    margin-bottom: 20px;
+                    font: 400 2.8rem 'Barlow', sans-serif;
+                }
+                .description {
+                    opacity: 0.7;
+                    white-space: pre-line;
+                    font: 400 1.6rem/2.7rem 'Barlow', sans-serif;
+                }
+            }
+
+            .address-2 {
+                padding-left: 20px;
+            }
+
+            .tel-mail {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+
+                .tel {
+                    margin-bottom: 5px;
+                    font: 400 2.4rem 'Barlow', sans-serif;
+                }
+
+                .mail {
+                    align-self: flex-start;
+                    font: 400 1.6rem 'Barlow', sans-serif;
+                    text-decoration: underline;
+                    transition: opacity .3s;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            .tel-mail-2 {
+                padding-left: 20px;
+            }
+        }
+
+        .note {
+            width: 50%;
+            transition: .3s;
+
+            .title {
+                font: 400 2.4rem 'Barlow', sans-serif;
+            }
+
+            .definition {
+                font: 400 1.6rem 'Barlow', sans-serif;
+                opacity: 0.7;
+            }
+        }
+
+        .social-bar {
+            display: flex;
+            flex-direction: row;
+            font-size: 1.9rem;
+            width: 50%;
+            padding-top: 8px;
+            padding-left: 32px;
+
+            .item {
+                margin-right: 33px;
+                transition: opacity .3s;
+            }
+
+            .item:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
 @media only screen and (min-height: 1000px) {
     .header {
         background: url('../img/home-hero-2560w.jpg') center/cover no-repeat;
@@ -852,6 +973,13 @@ button {
                 padding: 35px;
                 width: 100%;
             }
+        }
+    }
+
+    .footer {
+        .positioner {
+            width: 100%;
+            padding: 0 35px;
         }
     }
 }
@@ -1012,6 +1140,67 @@ button {
             }
         }
     }
+
+    .footer {
+        padding-top: 170px;
+        padding-bottom: 140px;
+        background: linear-gradient(5deg,#1e1e1e 0,#111111 100%);
+
+        .positioner {
+            flex-direction: column;
+
+            .section-title {
+                margin-bottom: 80px;
+                padding: 20px 0;
+                width: 100%;
+                font-size: 5rem;
+                text-align: center;
+                background: url('../img/home-contact-texture.svg') center no-repeat;
+
+                .link {
+                    white-space: normal;
+                }
+            }
+
+            .contacts {
+                width: auto;
+                padding: 0;
+                margin: 0 auto 55px auto;
+                text-align: center;
+                
+                .address-2 {
+                    padding: 0;
+                }
+
+                .tel-mail {
+                    
+                    .mail {
+                        align-self: stretch;
+                    }
+                }
+
+                .tel-mail-2 {
+                    padding: 0;
+                }
+            }
+    
+            .note {
+                width: auto;
+                text-align: center;
+                order: 1;
+            }
+    
+            .social-bar {
+                margin: 0 auto 40px auto;
+                width: auto;
+                padding: 0;
+                
+                .item {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -1140,7 +1329,10 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
-
+    .footer {
+        padding-top: 135px;
+        padding-bottom: 115px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1195,6 +1387,38 @@ button {
     .header {
         .layout-centered {
             top: -3%;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .footer {
+        .positioner {
+            .contacts {
+                margin-bottom: 65px;
+                
+                .address,
+                .tel-mail {
+                    width: 100%;
+                }
+
+                .addres-1 {
+                    order: 1;
+                }
+
+                .tel-mail-1 {
+                    margin-bottom: 22px;
+                    order: 2;
+                }
+
+                .address-2 {
+                    order: 3;
+                }
+
+                .tel-mail-2 {
+                    order: 4;
+                }
+            }
         }
     }
 }
@@ -1336,7 +1560,7 @@ button {
         .our-clients {
             padding-top: 60px;
             padding-bottom: 70px;
-            
+
             .positioner {
                 .section-title {
                     font-size: 4rem;
