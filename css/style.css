@@ -113,6 +113,15 @@ button {
   margin: auto;
 }
 
+.positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1400px;
+  padding: 0 25px;
+  margin: auto;
+}
+
 .section-title {
   letter-spacing: 0.5px;
   font: 600 7rem 'Barlow', sans-serif;
@@ -266,10 +275,7 @@ button {
   z-index: 900;
 }
 
-.sticky-nav .positioner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.sticky-nav .layout-centered {
   position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -278,11 +284,9 @@ button {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 48px;
-  width: 1680px;
-  margin: auto;
 }
 
-.sticky-nav .positioner .open-overlay-nav {
+.sticky-nav .layout-centered .open-overlay-nav {
   display: none;
   position: absolute;
   left: 0;
@@ -293,7 +297,7 @@ button {
   color: #444444;
 }
 
-.sticky-nav .positioner .logo {
+.sticky-nav .layout-centered .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,13 +305,13 @@ button {
   z-index: 1;
 }
 
-.sticky-nav .positioner .menu {
+.sticky-nav .layout-centered .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.sticky-nav .positioner .menu .list {
+.sticky-nav .layout-centered .menu .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,22 +319,22 @@ button {
   z-index: 1;
 }
 
-.sticky-nav .positioner .menu .list .item {
+.sticky-nav .layout-centered .menu .list .item {
   margin-left: 33px;
 }
 
-.sticky-nav .positioner .menu .list .item .link {
+.sticky-nav .layout-centered .menu .list .item .link {
   opacity: 0.85;
   -webkit-transition: .3s;
   transition: .3s;
   color: #444444;
 }
 
-.sticky-nav .positioner .menu .list .item .link:hover {
+.sticky-nav .layout-centered .menu .list .item .link:hover {
   opacity: 1;
 }
 
-.sticky-nav .positioner .menu .list .item .link.active {
+.sticky-nav .layout-centered .menu .list .item .link.active {
   opacity: 1;
 }
 
@@ -366,8 +370,6 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 30px 48px 0;
-  width: 1680px;
-  margin: auto;
 }
 
 .header .header-nav .positioner .open-overlay-nav {
@@ -1135,20 +1137,20 @@ button {
   .sticky-nav {
     height: 70px;
   }
-  .sticky-nav .positioner {
+  .sticky-nav .layout-centered {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .sticky-nav .positioner .open-overlay-nav {
+  .sticky-nav .layout-centered .open-overlay-nav {
     display: block;
   }
-  .sticky-nav .positioner .logo {
+  .sticky-nav .layout-centered .logo {
     margin: 0 auto;
     font-size: 1.8rem;
     font-weight: 700;
   }
-  .sticky-nav .positioner .menu {
+  .sticky-nav .layout-centered .menu {
     display: none;
   }
   .header {
