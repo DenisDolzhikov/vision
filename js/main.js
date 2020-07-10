@@ -1,13 +1,5 @@
 'use strict';
 
-// Preloader
-
-{
-    window.onload = () => {
-        document.body.classList.add('loaded');
-    };
-}
-
 
 // Header parallax effects
 {   
