@@ -1,0 +1,171 @@
+.sticky-nav {
+    display: flex;
+    position: fixed;
+    height: 80px;
+    top: -85px;
+    right: 0;
+    left: 0;
+    background: #ffffff;
+    transition: top .4s;
+    z-index: 900;
+    
+    .positioner {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 48px;
+        width: 1680px;
+        margin: auto;
+
+        .open-overlay-nav {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3.3rem;
+            color: #444444;
+        }
+
+        .logo {
+            display: flex;
+            font: 400 2.8rem 'Barlow', sans-serif;
+            z-index: 1;
+        }
+
+        .menu {
+            display: flex;
+
+            .list {
+                display: flex;
+                font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
+                z-index: 1;
+
+                .item {
+                    margin-left: 33px;
+                    
+                    .link {
+                        opacity: 0.85;
+                        transition: .3s;
+                        color: #444444;
+
+                        &.from_left {
+                            position: relative;
+                            display: flex;
+                        
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                display: block;
+                                bottom: -6px;
+                                left: 0;
+                                width: 100%;
+                                border-bottom: 1px solid #bb2d35;
+                                transform: scaleX(0);
+                                transform-origin: 0% 50%;
+                                transition: transform .1s ease-in-out;
+                                opacity: 1;
+                            }
+                        
+                            &:hover::after {
+                                transform: scaleX(1);
+                            }
+                        }
+
+                        &.active {
+                            position: relative;
+                            display: flex;
+                            opacity: 1;
+                        
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                display: block;
+                                bottom: -7px;
+                                left: 0;
+                                width: 100%;
+                                border-bottom: 1px solid #bb2d35;
+                            }
+                        }
+                    }
+
+                    .link:hover {
+                        opacity: 1;
+                    }
+    
+                    .link.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.sticky-nav.scroll {
+    top: 0;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .sticky-nav {
+        height: 70px;
+
+        .positioner {
+            justify-content: center;
+
+            .open-overlay-nav {
+                display: block;
+            }
+
+            .logo {
+                margin: 0 auto;
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .sticky-nav {
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .sticky-nav {
+        height: 70px;
+
+        .positioner {
+            justify-content: center;
+
+            .open-overlay-nav {
+                display: block;
+            }
+
+            .logo {
+                margin: 0 auto;
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .sticky-nav {
+        height: 50px;
+    }
+}

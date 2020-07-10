@@ -1,0 +1,192 @@
+.sticky-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  height: 80px;
+  top: -85px;
+  right: 0;
+  left: 0;
+  background: #ffffff;
+  -webkit-transition: top .4s;
+  transition: top .4s;
+  z-index: 900;
+}
+
+.sticky-nav .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 48px;
+  width: 1680px;
+  margin: auto;
+}
+
+.sticky-nav .positioner .open-overlay-nav {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 3.3rem;
+  color: #444444;
+}
+
+.sticky-nav .positioner .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 2.8rem 'Barlow', sans-serif;
+  z-index: 1;
+}
+
+.sticky-nav .positioner .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sticky-nav .positioner .menu .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
+  z-index: 1;
+}
+
+.sticky-nav .positioner .menu .list .item {
+  margin-left: 33px;
+}
+
+.sticky-nav .positioner .menu .list .item .link {
+  opacity: 0.85;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #444444;
+}
+
+.sticky-nav .positioner .menu .list .item .link.from_left {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sticky-nav .positioner .menu .list .item .link.from_left::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #bb2d35;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
+  opacity: 1;
+}
+
+.sticky-nav .positioner .menu .list .item .link.from_left:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.sticky-nav .positioner .menu .list .item .link.active {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.sticky-nav .positioner .menu .list .item .link.active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #bb2d35;
+}
+
+.sticky-nav .positioner .menu .list .item .link:hover {
+  opacity: 1;
+}
+
+.sticky-nav .positioner .menu .list .item .link.active {
+  opacity: 1;
+}
+
+.sticky-nav.scroll {
+  top: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sticky-nav {
+    height: 70px;
+  }
+  .sticky-nav .positioner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sticky-nav .positioner .open-overlay-nav {
+    display: block;
+  }
+  .sticky-nav .positioner .logo {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .sticky-nav .positioner .menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sticky-nav {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .sticky-nav {
+    height: 70px;
+  }
+  .sticky-nav .positioner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sticky-nav .positioner .open-overlay-nav {
+    display: block;
+  }
+  .sticky-nav .positioner .logo {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .sticky-nav .positioner .menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .sticky-nav {
+    height: 50px;
+  }
+}
+/*# sourceMappingURL=sticky-nav.css.map */

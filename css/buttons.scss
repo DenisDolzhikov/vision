@@ -1,0 +1,14 @@
+.button {
+    position: relative;
+    padding: 10px 22px;
+    border: 1px solid black;
+    font: 400 1.6rem 'Barlow Semi Condensed', sans-serif;
+    font-stretch: 100%;
+    color: #111111;
+    transition: ease-out .4s;
+}
+
+.button.slide_right:hover {
+    box-shadow: inset 123px 0 0 0 black;
+    color: #ffffff;
+}
