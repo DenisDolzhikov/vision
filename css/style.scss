@@ -28,6 +28,45 @@ button {
     background: none;
 }
 
+.link.from_left {
+    position: relative;
+    display: flex;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #bb2d35;
+        transform: scaleX(0);
+        transform-origin: 0% 50%;
+        transition: transform .1s ease-in-out;
+        opacity: 1;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+.link.active {
+    position: relative;
+    display: flex;
+    opacity: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -7px;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #bb2d35;
+    }
+}
+
 .no-opacity {
     opacity: 0;
     transition: opacity 1.2s;
@@ -47,6 +86,14 @@ button {
     letter-spacing: 0.5px;
     font: 600 7rem 'Barlow', sans-serif;
     color: #111111;
+}
+
+.header-title {
+    font: 700 9.2rem/10.12rem 'Barlow';
+    white-space: pre-line;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
 }
 
 .scroll-opacity.is-visible {

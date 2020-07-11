@@ -1752,8 +1752,9 @@ body.home .footer .positioner .social-bar .item:hover {
   }
 }
 
-body.services {
+body.services .header {
   background: gray;
+  height: 74vh;
 }
 
 * {
@@ -1783,6 +1784,55 @@ button {
   background: none;
 }
 
+.link.from_left {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.link.from_left::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #bb2d35;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+  transition: -webkit-transform .1s ease-in-out;
+  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
+  opacity: 1;
+}
+
+.link.from_left:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.link.active {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.link.active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #bb2d35;
+}
+
 .no-opacity {
   opacity: 0;
   -webkit-transition: opacity 1.2s;
@@ -1805,6 +1855,14 @@ button {
   letter-spacing: 0.5px;
   font: 600 7rem 'Barlow', sans-serif;
   color: #111111;
+}
+
+.header-title {
+  font: 700 9.2rem/10.12rem 'Barlow';
+  white-space: pre-line;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 
 .scroll-opacity.is-visible {
