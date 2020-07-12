@@ -24,24 +24,36 @@ function pageIs(page) {
     if (pageIs('index.html')) {
 
             parallaxHeaderSquare({
-                elem: document.querySelector('.home .header .svg-square-1'),
+                elem: document.querySelector('body.home .header .svg-square-1'),
                 speed: 0.2,
             });
 
             parallaxHeaderItems({
-                elem: document.querySelector('.home .header .header-title'),
+                elem: document.querySelector('body.home .header .header-title'),
                 speed: 0.1,
             });
 
             parallaxHeaderItems({
-                elem: document.querySelector('.home .header .icon-down'),
+                elem: document.querySelector('body.home .header .icon-down'),
                 speed: 0.4,
             });
 
             parallaxProjectsSquare({
-                elem: document.querySelector('.home .projects .svg-square-2'),
+                elem: document.querySelector('body.home .projects .svg-square-2'),
                 speed: 0.08,
             });
+    }
+
+    if (pageIs('services.html')) {
+
+        parallaxHeaderBg({
+            elem: document.querySelector('body.services .header'),
+        });
+
+        parallaxHeaderItems({
+            elem: document.querySelector('body.services .header .header-title'),
+            speed: 0.1,
+        });
     }
 
 
@@ -96,6 +108,19 @@ function pageIs(page) {
         }
     }
 
+    function parallaxHeaderBg({
+        elem,
+        speed = 0.3,
+    }) {
+        window.addEventListener('scroll', () => {
+            let offset = window.pageYOffset;
+            let basicPosY = parseInt(getComputedStyle(elem).backgroundPositionY);
+            console.log(offset / speed);
+
+            elem.style.backgroundPositionY = offset * speed + 'px';
+        });
+    }
+
 }
 
 
@@ -105,18 +130,30 @@ function pageIs(page) {
 {
     if (pageIs('index.html')) {
         scrollTopOpacity({
-            elem: document.querySelector('.home .header .description'),
+            elem: document.querySelector('body.home .header .description'),
             speed: 0.3,
         });
 
         scrollTopOpacity({
-            elem: document.querySelector('.home .header .header-title'),
+            elem: document.querySelector('body.home .header .header-title'),
             speed: 0.2,
         });
 
         scrollTopOpacity({
-            elem: document.querySelector('.home .header .icon-down'),
+            elem: document.querySelector('body.home .header .icon-down'),
             speed: 0.1,
+        });
+    }
+
+    if (pageIs('services.html')) {
+        scrollTopOpacity({
+            elem: document.querySelector('body.services .header .header-title'),
+            speed: 0.2,
+        });
+
+        scrollTopOpacity({
+            elem: document.querySelector('body.services .header .description'),
+            speed: 0.2,
         });
     }
 
@@ -173,6 +210,7 @@ function pageIs(page) {
             let opacity = scrollTop * (-speed / 100);
             
             //console.log(opacity);
+            console.log(elemParent);
 
             elem.style.opacity =  1 - opacity;
         })

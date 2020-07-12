@@ -1,6 +1,6 @@
 body.services .header {
   background: gray;
-  background: url("../img/services-hero.jpg") 70% 63%/107% no-repeat;
+  background: url("../img/services-hero-pc.jpg") 70% 0/107% no-repeat;
   color: #ffffff;
   height: auto;
 }
@@ -350,6 +350,12 @@ body.services .footer .positioner .social-bar {
 body.services .footer .positioner .social-bar .item {
   font-size: 1.9rem;
   margin-right: 34px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body.services .footer .positioner .social-bar .item:hover {
+  opacity: 0.5;
 }
 
 body.services .footer .positioner .social-bar .item:last-child {

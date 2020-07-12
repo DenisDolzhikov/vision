@@ -2,7 +2,7 @@ body.services {
     
     .header {
         background: gray;
-        background: url('../img/services-hero.jpg') 70% 63%/107% no-repeat;
+        background: url('../img/services-hero-pc.jpg') 70% 0/107% no-repeat;
         color: #ffffff;
         height: auto;
         
@@ -306,6 +306,11 @@ body.services {
                 .item {
                     font-size: 1.9rem;
                     margin-right: 34px;
+                    transition: .3s;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
                 }
 
                 .item:last-child {
