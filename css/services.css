@@ -159,9 +159,36 @@ body.services .pricing .positioner {
 }
 
 body.services .pricing .positioner .section-title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-bottom: 28px;
   font-size: 5.3rem;
   color: #ffffff;
+}
+
+body.services .pricing .positioner .section-title::before, body.services .pricing .positioner .section-title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #f73a46;
+}
+
+body.services .pricing .positioner .section-title::before {
+  display: none;
+  left: -97px;
+}
+
+body.services .pricing .positioner .section-title::after {
+  right: -97px;
 }
 
 body.services .pricing .positioner .pricing-list {
@@ -239,6 +266,96 @@ body.services .pricing .positioner .pricing-list .price-item .link:hover {
   opacity: 0.7;
 }
 
+body.services .message-us {
+  background: #131313;
+  color: #ffffff;
+}
+
+body.services .message-us .layout-centered {
+  position: relative;
+  padding: 267px 80px 275px 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body.services .message-us .layout-centered .section-title {
+  font: 500 3.6rem 'Barlow', sans-serif;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-bottom: 23px;
+}
+
+body.services .message-us .layout-centered .description {
+  font: 400 2rem/3rem 'Barlow', sans-serif;
+  white-space: pre-line;
+  opacity: 0.7;
+}
+
+body.services .message-us .layout-centered .link {
+  position: absolute;
+  top: 49%;
+  right: 76px;
+  -webkit-transform: translateY(-49%);
+          transform: translateY(-49%);
+  font: 600 5.39rem 'Barlow', sans-serif;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body.services .message-us .layout-centered .link:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+body.services .footer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #ffffff;
+}
+
+body.services .footer .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1400px;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin: auto;
+}
+
+body.services .footer .positioner .section-title {
+  font: 500 2.8rem 'Barlow', sans-serif;
+}
+
+body.services .footer .positioner .button {
+  margin-left: 60px;
+}
+
+body.services .footer .positioner .social-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.services .footer .positioner .social-bar .item {
+  font-size: 1.9rem;
+  margin-right: 34px;
+}
+
+body.services .footer .positioner .social-bar .item:last-child {
+  margin-right: 0;
+}
+
 @media only screen and (max-width: 1680px) {
   body.services .layout-centered {
     width: 100%;
@@ -254,6 +371,9 @@ body.services .pricing .positioner .pricing-list .price-item .link:hover {
   }
   body.services .header .layout-centered .description-wrapper .description {
     white-space: normal;
+  }
+  body.services .footer .positioner {
+    padding: 0px 30px;
   }
 }
 
@@ -274,6 +394,9 @@ body.services .pricing .positioner .pricing-list .price-item .link:hover {
   body.services .pricing .positioner {
     width: 100%;
     padding: 0px 30px;
+  }
+  body.services .footer .positioner {
+    width: auto;
   }
 }
 
@@ -333,6 +456,20 @@ body.services .pricing .positioner .pricing-list .price-item .link:hover {
   }
   body.services .pricing {
     padding-top: 150px;
+  }
+  body.services .message-us .layout-centered {
+    padding: 100px 30px 90px 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  body.services .message-us .layout-centered .description {
+    margin-bottom: 100px;
+    white-space: normal;
+  }
+  body.services .message-us .layout-centered .link {
+    position: static;
   }
 }
 
@@ -395,6 +532,22 @@ body.services .pricing .positioner .pricing-list .price-item .link:hover {
   body.services .pricing {
     padding-top: 100px;
   }
+  body.services .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  body.services .footer .positioner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body.services .footer .positioner .section-title {
+    margin-bottom: 30px;
+  }
+  body.services .footer .positioner .button {
+    margin: 0 0 30px 0;
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -430,6 +583,12 @@ body.services .pricing .positioner .pricing-list .price-item .link:hover {
   body.services .pricing .positioner .section-title {
     margin-bottom: 0;
     text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body.services .pricing .positioner .section-title::before {
+    display: block;
   }
   body.services .pricing .positioner .pricing-list .price-item {
     -webkit-box-orient: vertical;
@@ -498,12 +657,38 @@ body.services .pricing .positioner .pricing-list .price-item .link:hover {
   }
 }
 
+@media only screen and (max-width: 380px) {
+  body.services .pricing .positioner .section-title::before, body.services .pricing .positioner .section-title::after {
+    content: '';
+    width: 60px;
+  }
+  body.services .pricing .positioner .section-title::before {
+    left: -77px;
+  }
+  body.services .pricing .positioner .section-title::after {
+    right: -77px;
+  }
+  body.services .message-us .layout-centered {
+    padding: 50px 30px 50px 30px;
+  }
+}
+
 @media only screen and (max-width: 340px) {
   body.services .our-services {
     padding-top: 50px;
   }
   body.services .our-services .positioner .section-title {
     margin-bottom: 60px;
+  }
+  body.services .pricing .positioner .section-title::before, body.services .pricing .positioner .section-title::after {
+    content: '';
+    width: 40px;
+  }
+  body.services .pricing .positioner .section-title::before {
+    left: -57px;
+  }
+  body.services .pricing .positioner .section-title::after {
+    right: -57px;
   }
 }
 /*# sourceMappingURL=services.css.map */

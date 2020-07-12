@@ -140,9 +140,33 @@ body.services {
             margin: auto;
 
             .section-title {
+                position: relative;
+                display: flex;
+                align-self: flex-start;
                 margin-bottom: 28px;
                 font-size: 5.3rem;
                 color: #ffffff;
+                
+                &::before,
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 80px;
+                    height: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: #f73a46;
+                }
+
+                &::before {
+                    display: none;
+                    left: -97px;
+                }
+
+                &::after {
+                    right: -97px;
+                }
             }
 
             .pricing-list {
@@ -212,6 +236,84 @@ body.services {
             }
         }
     }
+
+    
+    .message-us {
+        background: #131313;
+        color: #ffffff;
+
+        .layout-centered {
+            position: relative;
+            padding: 267px 80px 275px 80px;
+            flex-direction: column;
+
+            .section-title {
+                font: 500 3.6rem 'Barlow', sans-serif;
+                letter-spacing: 0px;
+                color: #ffffff;
+                margin-bottom: 23px;
+            }
+
+            .description {
+                font: 400 2rem/3rem 'Barlow', sans-serif;
+                white-space: pre-line;
+                opacity: 0.7;
+            }
+
+            .link {
+                position: absolute;
+                top: 49%;
+                right: 76px;
+                transform: translateY(-49%);
+                font: 600 5.39rem 'Barlow', sans-serif;
+                text-decoration: underline;
+                letter-spacing: 1px;
+                transition: .3s;
+
+                &:hover {
+                    opacity: 0.6;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background: #ffffff;
+
+        .positioner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1400px;
+            padding-left: 30px;
+            padding-right: 10px;
+            margin: auto;
+
+            .section-title {
+                font: 500 2.8rem 'Barlow', sans-serif;
+            }
+
+            .button {
+                margin-left: 60px;
+            }
+
+            .social-bar {
+                display: flex;
+
+                .item {
+                    font-size: 1.9rem;
+                    margin-right: 34px;
+                }
+
+                .item:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1680px) {
@@ -237,6 +339,12 @@ body.services {
                         white-space: normal;
                     }
                 }
+            }
+        }
+
+        .footer {
+            .positioner {
+                padding: 0px 30px;
             }
         }
     }
@@ -268,6 +376,12 @@ body.services {
             .positioner {
                 width: 100%;
                 padding: 0px 30px;
+            }
+        }
+
+        .footer {
+            .positioner {
+                width: auto;
             }
         }
     }
@@ -349,6 +463,23 @@ body.services {
         .pricing {
             padding-top: 150px;
         }
+
+        .message-us {
+            .layout-centered {
+                padding: 100px 30px 90px 30px;
+                align-items: center;
+                text-align: center;
+
+                .description {
+                    margin-bottom: 100px;
+                    white-space: normal;
+                }
+
+                .link {
+                    position: static;
+                }
+            }
+        }
     }
 }
 
@@ -423,6 +554,23 @@ body.services {
         .pricing {
             padding-top: 100px;
         }
+
+        .footer {
+            padding-top: 40px;
+            padding-bottom: 40px;
+    
+            .positioner {
+                flex-direction: column;
+
+                .section-title {
+                    margin-bottom: 30px;
+                }
+
+                .button {
+                    margin: 0 0 30px 0;
+                }
+            }
+        }
     }
 }
 
@@ -469,6 +617,11 @@ body.services {
                 .section-title {
                     margin-bottom: 0;
                     text-align: center;
+                    align-self: center;
+
+                    &::before {
+                        display: block;
+                    }
                 }
 
                 .pricing-list {
@@ -546,6 +699,36 @@ body.services {
     }
 }
 
+@media only screen and (max-width: 380px) {
+    body.services {
+        .pricing {
+            .positioner {
+                .section-title {
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 60px;
+                }
+
+                    &::before {
+                        left: -77px;
+                    }
+
+                    &::after {
+                        right: -77px;
+                    }
+                }
+            }
+        }
+
+        .message-us {
+            .layout-centered {
+                padding: 50px 30px 50px 30px;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 340px) {
     body.services {
         .our-services {
@@ -554,6 +737,26 @@ body.services {
             .positioner {
                 .section-title {
                     margin-bottom: 60px;
+                }
+            }
+        }
+
+        .pricing {
+            .positioner {
+                .section-title {
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 40px;
+                }
+
+                    &::before {
+                        left: -57px;
+                    }
+
+                    &::after {
+                        right: -57px;
+                    }
                 }
             }
         }
