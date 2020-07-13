@@ -247,6 +247,12 @@ body.services {
             padding: 267px 80px 275px 80px;
             flex-direction: column;
 
+            .svg-square-1 {
+                position: absolute;
+                top: 44.5%;
+                left: 2.5%;
+            }
+
             .section-title {
                 font: 500 3.6rem 'Barlow', sans-serif;
                 letter-spacing: 0px;
