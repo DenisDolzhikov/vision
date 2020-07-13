@@ -193,7 +193,7 @@ function pageIs(page) {
 
             let options = {
                 rootMargin: '0px',
-                threshold: 0.20
+                threshold: 0.10
             };
 
             const callback = (entries, observer) => {
@@ -201,7 +201,7 @@ function pageIs(page) {
                     const { target } = entry;
                     console.log(entry, target)
                     
-                    if (entry.intersectionRatio >= 0.20) {
+                    if (entry.intersectionRatio >= 0.10) {
                         target.classList.add("is-visible");
                     } else {
                         target.classList.remove("is-visible");

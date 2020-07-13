@@ -317,57 +317,6 @@ body.services .message-us .layout-centered .link:hover {
   text-decoration: none;
 }
 
-body.services .footer {
-  padding-top: 70px;
-  padding-bottom: 70px;
-  background: #ffffff;
-}
-
-body.services .footer .positioner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 1400px;
-  padding-left: 30px;
-  padding-right: 10px;
-  margin: auto;
-}
-
-body.services .footer .positioner .section-title {
-  font: 500 2.8rem 'Barlow', sans-serif;
-}
-
-body.services .footer .positioner .button {
-  margin-left: 60px;
-}
-
-body.services .footer .positioner .social-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body.services .footer .positioner .social-bar .item {
-  font-size: 1.9rem;
-  margin-right: 34px;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-body.services .footer .positioner .social-bar .item:hover {
-  opacity: 0.5;
-}
-
-body.services .footer .positioner .social-bar .item:last-child {
-  margin-right: 0;
-}
-
 @media only screen and (max-width: 1680px) {
   body.services .layout-centered {
     width: 100%;
@@ -383,9 +332,6 @@ body.services .footer .positioner .social-bar .item:last-child {
   }
   body.services .header .layout-centered .description-wrapper .description {
     white-space: normal;
-  }
-  body.services .footer .positioner {
-    padding: 0px 30px;
   }
 }
 
@@ -406,9 +352,6 @@ body.services .footer .positioner .social-bar .item:last-child {
   body.services .pricing .positioner {
     width: 100%;
     padding: 0px 30px;
-  }
-  body.services .footer .positioner {
-    width: auto;
   }
 }
 
@@ -543,22 +486,6 @@ body.services .footer .positioner .social-bar .item:last-child {
   }
   body.services .pricing {
     padding-top: 100px;
-  }
-  body.services .footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  body.services .footer .positioner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body.services .footer .positioner .section-title {
-    margin-bottom: 30px;
-  }
-  body.services .footer .positioner .button {
-    margin: 0 0 30px 0;
   }
 }
 

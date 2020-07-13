@@ -283,48 +283,6 @@ body.services {
             }
         }
     }
-
-    .footer {
-        padding-top: 70px;
-        padding-bottom: 70px;
-        background: #ffffff;
-
-        .positioner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 1400px;
-            padding-left: 30px;
-            padding-right: 10px;
-            margin: auto;
-
-            .section-title {
-                font: 500 2.8rem 'Barlow', sans-serif;
-            }
-
-            .button {
-                margin-left: 60px;
-            }
-
-            .social-bar {
-                display: flex;
-
-                .item {
-                    font-size: 1.9rem;
-                    margin-right: 34px;
-                    transition: .3s;
-
-                    &:hover {
-                        opacity: 0.5;
-                    }
-                }
-
-                .item:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
 }
 
 @media only screen and (max-width: 1680px) {
@@ -350,12 +308,6 @@ body.services {
                         white-space: normal;
                     }
                 }
-            }
-        }
-
-        .footer {
-            .positioner {
-                padding: 0px 30px;
             }
         }
     }
@@ -387,12 +339,6 @@ body.services {
             .positioner {
                 width: 100%;
                 padding: 0px 30px;
-            }
-        }
-
-        .footer {
-            .positioner {
-                width: auto;
             }
         }
     }
@@ -564,23 +510,6 @@ body.services {
 
         .pricing {
             padding-top: 100px;
-        }
-
-        .footer {
-            padding-top: 40px;
-            padding-bottom: 40px;
-    
-            .positioner {
-                flex-direction: column;
-
-                .section-title {
-                    margin-bottom: 30px;
-                }
-
-                .button {
-                    margin: 0 0 30px 0;
-                }
-            }
         }
     }
 }
