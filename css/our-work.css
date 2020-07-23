@@ -67,8 +67,6 @@ body.our-work .header .header-slider .swiper-slide .positioner .button {
       align-self: flex-start;
   border-color: #ffffff;
   color: #ffffff;
-  -webkit-transition: color .3ms, background 0.3ms;
-  transition: color .3ms, background 0.3ms;
 }
 
 body.our-work .header .header-slider .swiper-slide .positioner .button:hover {

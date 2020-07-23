@@ -136,7 +136,7 @@ function pageIs(page) {
         window.addEventListener('scroll', () => {
             let offset = window.pageYOffset;
             let basicPosY = parseInt(getComputedStyle(elem).backgroundPositionY);
-            console.log(offset / speed);
+            //console.log(offset / speed);
 
             elem.style.backgroundPositionY = offset * speed + 'px';
         });
@@ -199,7 +199,7 @@ function pageIs(page) {
             const callback = (entries, observer) => {
                 entries.forEach(entry => {
                     const { target } = entry;
-                    console.log(entry, target)
+                    //console.log(entry, target)
                     
                     if (entry.intersectionRatio >= 0.10) {
                         target.classList.add("is-visible");
@@ -231,7 +231,7 @@ function pageIs(page) {
             let opacity = scrollTop * (-speed / 100);
             
             //console.log(opacity);
-            console.log(elemParent);
+            //console.log(elemParent);
 
             elem.style.opacity =  1 - opacity;
         })
