@@ -273,225 +273,6 @@ body.home {
                 height: 844px;
             }
         }
-
-        .our-clients {
-            padding-top: 210px;
-            padding-bottom: 195px;
-
-            .our-clients-slider {
-                display: none;
-            }
-
-            .positioner {
-                display: flex;
-                flex-wrap: wrap;
-                width: 1400px;
-                padding: 0 25px;
-                margin: auto;
-
-                .section-title {
-                    width: 50%;
-                    word-spacing: 2.5px;
-                    letter-spacing: 1px;
-                    font-size: 5.3rem;
-
-                    .text {
-                        position: relative;
-
-                        &::after,
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            width: 80px;
-                            height: 2px;
-                            background: #f73a46;
-                        }
-
-                        &::before {
-                            display: none;
-                            left: -98px;
-                        }
-
-                        &::after {
-                            display: block;
-                            right: -98px;
-                        }
-                    }
-                }
-
-                .description {
-                    width: 50%;
-                    margin-bottom: 165px;
-                    padding-left: 19px;
-                    white-space: pre-line;
-                    font: 400 1.6rem/2.6rem 'Barlow', sans-serif;
-                    color: #444444;
-                }
-
-                .clients-list {
-                    display: flex;
-                    flex-wrap: wrap;
-                    width: 100%;
-
-                    .client {
-                        width: 20%;
-                        text-align: center;
-
-                        .image {
-                            position: relative;
-                        }
-                    }
-
-                    .client:nth-child(1) {
-                        .image {
-                            width: 90px;
-                            left: -27px;
-                        }
-                        margin-bottom: 85px;
-                    }
-
-                    .client:nth-child(2) {
-                        .image {
-                            width: 115px;
-                            top: -9px;
-                            left: -11px;
-                        }
-                    }
-
-                    .client:nth-child(3) {
-                        .image {
-                            width: 125px;
-                            top: 5px;
-                            left: 3px;
-                        }
-                    }
-
-                    .client:nth-child(4) {
-                        .image {
-                            width: 125px;
-                            top: 5px;
-                            left: 15px;
-                        }
-                    }
-
-                    .client:nth-child(5) {
-                        .image {
-                            width: 105px;
-                            left: 27px;
-                        }
-                    }
-
-                    .client:nth-child(6) {
-                        margin-bottom: 80px;
-
-                        .image {
-                            width: 115px;
-                            top: 2px;
-                            left: -27px;
-                        }
-                    }
-
-                    .client:nth-child(7) {
-                        .image {
-                            width: 120px;
-                            left: -15px;
-                        }
-                    }
-
-                    .client:nth-child(8) {
-                        .image {
-                            width: 110px;
-                            top: 3px;
-                        }
-                    }
-
-                    .client:nth-child(9) {
-                        .image {
-                            width: 120px;
-                            left: 15px;
-                            top: 2px;
-                        }
-                    }
-
-                    .client:nth-child(10) {
-                        .image {
-                            width: 145px;
-                            left: 30px;
-                            top: -3px;
-                        }
-                    }
-
-                    .client:nth-child(11) {
-                        .image {
-                            width: 115px;
-                            left: -25px;
-                            top: -1px;
-                        }
-                    }
-
-                    .client:nth-child(12) {
-                        .image {
-                            width: 140px;
-                            left: -15px;
-                            top: -2px;
-                        }
-                    }
-
-                    .client:nth-child(13) {
-                        .image {
-                            width: 160px;
-                        }
-                    }
-
-                    .client:nth-child(14) {
-                        .image {
-                            width: 125px;
-                            left: 15px;
-                            top: -3px;
-                        }
-                    }
-
-                    .client:nth-child(15) {
-                        margin-bottom: 294px;
-
-                        .image {
-                            width: 145px;
-                            left: 30px;
-                            top: -1px;
-                        }
-                    }
-                }
-
-                .clients-reviews {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: flex-end;
-                    width: 100%;
-                    color: #111111;
-
-                    .title {
-                        width: 50%;
-                        font: 400 2.8rem 'Barlow', sans-serif;
-                    }
-
-                    .description {
-                        width: 50%;
-                        padding-top: 5px;
-                        margin-bottom: 13px;
-                        font: italic 400 2.4rem/3.4rem 'Barlow', sans-serif;
-                    }
-
-                    .author {
-                        width: 50%;
-                        padding-left: 25px;
-                        letter-spacing: 0px;
-                        font: italic 400 1.6rem 'Barlow', sans-serif;
-                        color: #444444;
-                    }
-                }
-            }
-        }
     }
 
     .footer {
@@ -666,13 +447,6 @@ body.home {
                     padding: 0 35px;
                 }
             }
-
-            .our-clients {
-                .positioner {
-                    padding: 35px;
-                    width: 100%;
-                }
-            }
         }
 
         .footer {
@@ -747,14 +521,6 @@ body.home {
                     padding-top: 320px;
                 }
             }
-
-            .our-clients {
-                .positioner {
-                    .description {
-                        white-space: normal;
-                    }
-                }
-            }
         }
     }
 }
@@ -776,26 +542,6 @@ body.home {
             .projects {
                 padding-top: 170px;
                 padding-bottom: 225px;
-            }
-
-            .our-clients {
-                .positioner {
-                    .clients-list {
-                        .client {
-                            width: 33.3%;
-
-                            .image {
-                                position: static;
-                            }
-                        }
-
-                        .client:nth-child(6),
-                        .client:nth-child(7),
-                        .client:nth-child(10) {
-                            margin-bottom: 85px;
-                        }
-                    }
-                }
             }
         }
 
@@ -897,55 +643,6 @@ body.home {
                     }
                 }
             }
-
-            .our-clients {
-                padding-top: 180px;
-
-                .positioner {
-                    .section-title {
-                        width: 100%;
-                        margin-bottom: 20px;
-                        text-align: center;
-
-                        .text {
-                            &::before {
-                                display: block;
-                            }
-                        }
-                    }
-
-                    .description {
-                        width: 100%;
-                        padding: 0;
-                        text-align: center;
-                    }
-
-                    .clients-list {
-                        .client:nth-child(15) {
-                            margin-bottom: 240px;
-                        }
-                    }
-
-                    .clients-reviews {
-                        text-align: center;
-
-                        .title {
-                            width: 100%;
-                            margin-bottom: 20px;
-                        }
-
-                        .description {
-                            padding: 0;
-                            width: 100%;
-                        }
-
-                        .author {
-                            width: 100%;
-                            padding: 0;
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -1032,19 +729,6 @@ body.home {
                     top: 17%;
                 }
             }
-
-            .our-clients {
-                padding-top: 105px;
-                padding-bottom: 100px;
-
-                .positioner {
-                    .clients-list {
-                        .client:nth-child(15) {
-                            margin-bottom: 190px;
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -1128,64 +812,6 @@ body.home {
                     padding-right: 10px;
                 }
             }
-
-            .our-clients {
-                .positioner {
-
-                    .description {
-                        margin-bottom: 100px;
-                    }
-
-                    .our-clients-slider {
-                        position: relative;
-                        display: flex;
-                        width: 100%;
-                        margin-bottom: 150px;
-
-                        .swiper-slide {
-                            padding-left: 20px;
-                            padding-right: 20px;
-                            overflow: hidden;
-                            
-                            .clients {
-                                display: flex;
-                                flex-wrap: wrap;
-
-                                .client {
-                                    width: 50%;
-                                    text-align: center;
-                                }
-
-                                .client:nth-child(1) {
-                                    margin-bottom: 40px;
-                                }
-                            }
-                        }
-
-                        .swiper-pagination {
-                            position: absolute;
-                            bottom: -40px;
-
-                            .swiper-pagination-bullet {
-                                margin-right: 7px;
-                                padding: 3px;
-                                background: none;
-                                opacity: 0.3;
-                                background: #444444;
-                            }
-
-                            .swiper-pagination-bullet-active {
-                                background: #af3840;
-                                opacity: 0.7;
-                            }
-                        }
-                    }
-
-                    .clients-list {
-                        display: none;
-                    }
-                }
-            }
         }
     }
 }
@@ -1202,51 +828,6 @@ body.home {
             .projects {
                 padding-top: 80px;
                 padding-bottom: 130px;
-            }
-
-            .our-clients {
-                padding-top: 60px;
-                padding-bottom: 70px;
-
-                .positioner {
-                    .section-title {
-                        font-size: 4rem;
-
-                        .text {
-                            &::before,
-                            &::after {
-                                width: 60px;
-                            }
-
-                            &::before {
-                                left: -78px;
-                            }
-
-                            &::after {
-                                right: -78px;
-                            }
-                        }
-                    }
-
-                    .our-clients-slider {
-                        margin-bottom: 110px;
-
-                        .swiper-slide {
-                            padding: 0;
-
-                            .clients {
-                                .client {
-                                    width: 100%;
-                                    margin-bottom: 40px;
-                                }
-                            }
-                        }
-
-                        .swiper-pagination {
-                            bottom: 15px;
-                        }
-                    }
-                }
             }
         }
     }
@@ -1273,29 +854,6 @@ body.home {
 
                 .header-title {
                     font: 700 4rem/5rem 'Barlow';
-                }
-            }
-        }
-
-        .main {
-            .our-clients {
-                .positioner {
-                    .section-title {
-                        .text {
-                            &::before,
-                            &::after {
-                                width: 40px;
-                            }
-
-                            &::before {
-                                left: -58px;
-                            }
-
-                            &::after {
-                                right: -58px;
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -1343,21 +901,6 @@ body.home {
                     &::before,
                     &::after {
                         display: none;
-                    }
-                }
-            }
-        }
-
-        .main {
-            .our-clients {
-                .positioner {
-                    .section-title {
-                        .text {
-                            &::before,
-                            &::after {
-                                display: none;
-                            }
-                        }
                     }
                 }
             }

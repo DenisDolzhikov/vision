@@ -1,0 +1,442 @@
+body.about-us {
+
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        color: #ffffff;
+    }
+
+    .main {
+        background: url('../img/about-us-team-background.jpg') center/cover fixed;
+
+        .team {
+            display: flex;
+
+            .positioner {
+                display: flex;
+                flex-direction: column;
+                width: 1400px;
+                padding: 360px 25px 0px 25px;
+                margin: auto;
+                color: #ffffff;
+
+                .section-title,
+                .note {
+                    text-align: center;
+                }
+
+                .section-title {
+                    position: relative;
+                    font: 700 9.2rem 'Barlow', sans-serif;
+                    text-transform: uppercase;
+                    letter-spacing: 1.4px;
+                    margin-bottom: 20px;
+                    color: #ffffff;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        width: 80px;
+                        height: 2px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: -33px;
+                        background: #f73a46;
+                    }
+                }
+
+                .note {
+                    font: 400 2.4rem 'Barlow', sans-serif;
+                    opacity: 0.7;
+                    margin-bottom: 140px;
+                }
+
+                .list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-bottom: 145px;
+
+                    .teammate {
+                        width: 47.4%;
+                        margin-bottom: 70px;
+
+                        .person {
+                            position: relative;
+
+                            .image {
+                                source,
+                                img {
+                                    width: 100%;
+                                }
+                            }
+
+                            .about-person {
+                                position: absolute;
+                                bottom: 8%;
+                                left: 6%;
+
+                                .name {
+                                    font: 400 2.8rem 'Barlow', sans-serif;
+                                    margin-bottom: 5px;
+                                }
+
+                                .profession {
+                                    font: 400 1.6rem 'Barlow', sans-serif;
+                                    opacity: 0.7;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    margin-bottom: 110px;
+
+                    .description-title {
+                        position: relative;
+                        font: 500 3.6rem 'Barlow', sans-serif;
+                        width: 33.3%;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            width: 80px;
+                            height: 2px;
+                            background: #f73a46;
+                            left: 0;
+                            top: 84px;
+                        }
+                    }
+
+                    .description-block {
+                        width: 33.3%;
+                        padding-left: 30px;
+
+                        .block-title {
+                            font: 500 1.2rem 'Barlow Semi Condensed', sans-serif;
+                            text-transform: uppercase;
+                            color: #ff4652;
+                            margin-bottom: 20px;
+                        }
+
+                        .block-description {
+                            font: 400 1.6rem/2.8rem 'Barlow', sans-serif;
+                            opacity: .7;
+                            white-space: pre-line;
+                        }
+                    }
+
+                    .description-block:nth-child(3) {
+                        padding-left: 45px;
+                    }
+                }
+
+                .grid {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .col {
+                        width: 30%;
+
+                        .person {
+                            position: relative;
+                            margin-bottom: 70px;
+
+                            .image {
+                                source,
+                                img {
+                                    width: 100%;
+                                }
+                            }
+
+                            .about-person {
+                                position: absolute;
+                                bottom: 37px;
+                                left: 40px;
+
+                                .name {
+                                    font: 400 2.4rem 'Barlow', sans-serif;
+                                }
+
+                                .profession {
+                                    font: 400 1.6rem 'Barlow', sans-serif;
+                                    opacity: 0.7;
+                                }
+                            }
+                        }
+
+                        .link {
+                            display: flex;
+                            flex-direction: column;
+                            align-self: flex-start;
+                            margin-bottom: 207px;
+                            padding: 135px 0px 45px 40px;
+                            background: linear-gradient(155deg,#ff4652 0,#ff5646 100%);
+                            box-shadow: 8px 20px 45px rgba(255,70,82, .12);
+                            transition: .6s;
+                            
+                            &:hover {
+                                background: linear-gradient(90deg,#ff4652 0,#ff5646 95%);
+                                box-shadow: 8px 20px 45px rgba(255,70,82, .2);
+                            }
+        
+                            .link-title {
+                                font: 500 3.6rem 'Barlow', sans-serif;
+                                margin-bottom: 5px;
+                            }
+        
+                            .link-description {
+                                font: 400 1.6rem 'Barlow', sans-serif;
+                            }
+                        }
+                    }
+                }
+
+                .link {
+                    display: none;
+                }
+            }
+        }
+
+        .our-clients {
+            padding-top: 220px;
+
+            .positioner {
+                .section-title {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 170px;
+
+                    .text {
+                        position: relative;
+        
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            left: 50%;
+                            right: 0;
+                            top: initial;
+                            bottom: -54px;
+                            transform: translateX(-50%);
+                            width: 80px;
+                            height: 2px;
+                            background: #f73a46;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    body.about-us {
+        .main {
+            .positioner {
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body.about-us {
+        .main {
+            .team {
+                .positioner {
+                    .section-title {
+                        font-size: 7rem;
+                    }
+
+                    .grid {
+                        .col {
+                            .link {
+                                padding-left: 0;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    body.about-us {
+        .main {
+            .team {
+                .positioner {
+                    .list {
+                        .teammate {
+                            width: 100%;
+                        }
+                    }
+
+                    .description {
+                        flex-direction: column;
+                        text-align: center;
+                        
+                        .description-title {
+                            width: 100%;
+                            margin-bottom: 100px;
+
+                            &::after {
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+
+                        .description-block {
+                            width: 100%;
+                            padding: 0;
+                        }
+
+                        .description-block:nth-child(2) {
+                            margin-bottom: 50px;
+                        }
+
+                        .description-block:nth-child(3) {
+                            padding-left: 0px;
+                        }
+                    }
+
+                    .grid {
+                        .col {
+                            width: 100%;
+
+                            .link {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .link {
+                        display: flex;
+                        flex-direction: column;
+                        align-self: flex-start;
+                        margin-bottom: 120px;
+                        padding: 20px 0 20px 20px;
+                        width: 100%;
+                        background: linear-gradient(155deg,#ff4652 0,#ff5646 100%);
+                        box-shadow: 8px 20px 45px rgba(255,70,82, .12);
+                        transition: .6s;
+                        
+                        &:hover {
+                            background: linear-gradient(90deg,#ff4652 0,#ff5646 95%);
+                            box-shadow: 8px 20px 45px rgba(255,70,82, .2);
+                        }
+    
+                        .link-title {
+                            font: 500 3.6rem 'Barlow', sans-serif;
+                            margin-bottom: 5px;
+                        }
+    
+                        .link-description {
+                            font: 400 1.6rem 'Barlow', sans-serif;
+                        }
+                    }
+                }
+            }
+
+            .our-clients {
+                padding-top: 100px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body.about-us {
+        .main {
+            .team {
+                .positioner {
+                    .section-title {
+                        font-size: 5.9rem;
+
+                        &::after {
+                           
+                        }
+                    }
+                }
+            }
+
+            .our-clients {
+                .positioner {
+                    .section-title {
+
+                        .text {
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body.about-us {
+        .main {
+            .our-clients {
+                .positioner {
+                    .section-title {
+                        .text {
+                            &::after {
+                                width: 80px;
+                                right: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body.about-us {
+        .main {
+            .our-clients {
+                .positioner {
+                    .section-title {
+                        .text {
+                            &::after {
+                                width: 80px;
+                                right: 50%;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) { 
+    body.about-us {
+        .main {
+            .our-clients {
+                .positioner {
+                    .section-title {
+                        .text {
+                            &::after {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
