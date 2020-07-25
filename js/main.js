@@ -22,30 +22,28 @@ function pageIs(page) {
 // Header parallax effects
 {   
     if (pageIs('index.html')) {
+        parallaxHeaderSquare({
+            elem: document.querySelector('body.home .header .svg-square-1'),
+            speed: 0.2,
+        });
 
-            parallaxHeaderSquare({
-                elem: document.querySelector('body.home .header .svg-square-1'),
-                speed: 0.2,
-            });
+        parallaxHeaderItems({
+            elem: document.querySelector('body.home .header .header-title'),
+            speed: 0.1,
+        });
 
-            parallaxHeaderItems({
-                elem: document.querySelector('body.home .header .header-title'),
-                speed: 0.1,
-            });
+        parallaxHeaderItems({
+            elem: document.querySelector('body.home .header .icon-down'),
+            speed: 0.4,
+        });
 
-            parallaxHeaderItems({
-                elem: document.querySelector('body.home .header .icon-down'),
-                speed: 0.4,
-            });
-
-            parallaxProjectsSquare({
-                elem: document.querySelector('body.home .projects .svg-square-2'),
-                speed: 0.08,
-            });
+        parallaxProjectsSquare({
+            elem: document.querySelector('body.home .projects .svg-square-2'),
+            speed: 0.08,
+        });
     }
 
     if (pageIs('services.html')) {
-
         parallaxHeaderBg({
             elem: document.querySelector('body.services .header'),
         });
@@ -60,6 +58,20 @@ function pageIs(page) {
             speed: 0.1
         });
     }
+
+    if (pageIs('about-us.html')) {
+        parallaxHeaderItems({
+            elem: document.querySelector('body.about-us .team .list .teammate:nth-child(2)'),
+            speed: 0.2
+        });
+
+        parallaxHeaderItems({
+            elem: document.querySelector('body.about-us .team .section-title'),
+            speed: 0.03
+        });
+    }
+
+    progressiveTopOpacity();
 
 
     function parallaxHeaderSquare({
@@ -140,6 +152,33 @@ function pageIs(page) {
 
             elem.style.backgroundPositionY = offset * speed + 'px';
         });
+    }
+
+    function progressiveTopOpacity() {
+        const progressiveScrollOpacityList = document.querySelectorAll('.progressive-scroll-opacity');
+
+        document.addEventListener('scroll', () => {
+            for (let elem of progressiveScrollOpacityList) {
+
+                if (isVisible(elem)) {
+                    let elemBox = elem.getBoundingClientRect();
+                    let opacity = elemBox.top / 1200 + elemBox.height / 1200;
+                    //console.log(opacity);
+                    
+                    elem.style.opacity = opacity;
+                }
+            }
+        });
+        
+        function isVisible(elem) {
+            let elemBottom = window.pageYOffset + elem.getBoundingClientRect().bottom;
+            let windowTop = window.pageYOffset;
+            
+            if (elemBottom > windowTop) {
+                return true;
+            }
+            return false;
+        }
     }
 
 }

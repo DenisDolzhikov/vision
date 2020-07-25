@@ -276,15 +276,18 @@ body.about-us .main .quote {
 }
 
 body.about-us .main .quote .section-title {
+  text-align: center;
+}
+
+body.about-us .main .quote .section-title .link {
   font: 400 2.8rem 'Barlow', sans-serif;
   text-decoration: underline;
   color: #ffffff;
-  text-align: center;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-body.about-us .main .quote .section-title:hover {
+body.about-us .main .quote .section-title .link:hover {
   text-decoration: none;
   opacity: 0.7;
 }
