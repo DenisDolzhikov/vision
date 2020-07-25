@@ -210,27 +210,58 @@ body.about-us {
 
             .positioner {
                 .section-title {
+                    position: relative;
                     width: 100%;
                     text-align: center;
                     margin-bottom: 170px;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        right: 0;
+                        top: initial;
+                        bottom: -54px;
+                        transform: translateX(-50%);
+                        width: 80px;
+                        height: 2px;
+                        background: #f73a46;
+                    }
 
                     .text {
                         position: relative;
         
                         &::after {
-                            content: "";
-                            display: block;
-                            position: absolute;
-                            left: 50%;
-                            right: 0;
-                            top: initial;
-                            bottom: -54px;
-                            transform: translateX(-50%);
-                            width: 80px;
-                            height: 2px;
-                            background: #f73a46;
+                            display: none;
                         }
                     }
+                }
+
+                .clients-list {
+                    .client:nth-child(15) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .quote {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            background-color: rgb(255, 70, 82);
+            background: linear-gradient(155deg,#ff4652 0,#ff5646 100%);
+
+            .section-title {
+                font: 400 2.8rem 'Barlow', sans-serif;
+                text-decoration: underline;
+                color: #ffffff;
+                text-align: center;
+                transition: .3s;
+
+                &:hover {
+                    text-decoration: none;
+                    opacity: 0.7;
                 }
             }
         }
@@ -349,6 +380,7 @@ body.about-us {
 
             .our-clients {
                 padding-top: 100px;
+                padding-bottom: 120px;
             }
         }
     }
@@ -363,7 +395,7 @@ body.about-us {
                         font-size: 5.9rem;
 
                         &::after {
-                           
+
                         }
                     }
                 }
@@ -385,18 +417,100 @@ body.about-us {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
     body.about-us {
         .main {
+            .team {
+                .positioner {
+                    .description {
+                        .description-block {
+                            .block-description {
+                                white-space: normal;
+                            }
+                        }
+                    }
+                }
+            }
+
             .our-clients {
                 .positioner {
                     .section-title {
                         .text {
+                            &::before,
                             &::after {
-                                width: 80px;
-                                right: 50%;
+                                display: none;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    body.about-us {
+        .main {
+
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body.about-us {
+        .main {
+            .our-clients {
+                padding-top: 50px;
+                padding-bottom: 40px;
+
+                .positioner {
+                    .our-clients-slider {
+                        margin-bottom: 70px;
+                    }
+                }
+            }
+
+            .quote {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body.about-us {
+        .main {
+            .team {
+                .positioner {
+                    padding-top: 220px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+
+                    .list {
+                        margin-bottom: 40px;
+
+                        .teammate {
+                            margin-bottom: 35px;
+                        }
+                    }
+
+                    .grid {
+                        .col {
+                            .person {
+                                margin-bottom: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .our-clients {
+                padding-top: 50px;
+
+                .positioner {
+                    .section-title {
+                        margin-bottom: 140px;
                     }
                 }
             }
@@ -407,18 +521,18 @@ body.about-us {
 @media only screen and (max-width: 400px) {
     body.about-us {
         .main {
-            .our-clients {
+            .team {
                 .positioner {
-                    .section-title {
-                        .text {
-                            &::after {
-                                width: 80px;
-                                right: 50%;
-                            }
-                        }
+                    .note {
+                        margin-bottom: 110px;
                     }
                 }
-            }   
+            }
+
+            .quote {
+                padding-top: 35px;
+                padding-bottom: 35px;
+            }
         }
     }
 }
@@ -431,7 +545,7 @@ body.about-us {
                     .section-title {
                         .text {
                             &::after {
-                                display: block;
+                                display: none;
                             }
                         }
                     }

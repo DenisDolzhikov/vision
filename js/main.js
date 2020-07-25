@@ -312,7 +312,7 @@ function pageIs(page) {
 
 //Sliders initialization
 
-let projectSlider = new Swiper('.projects .projects-slider', {
+let projectSlider = new Swiper('body.home .projects .projects-slider', {
     loop: true,
     speed: 600,
     slidesPerView: 1,
@@ -351,7 +351,7 @@ let projectSlider = new Swiper('.projects .projects-slider', {
     }
 });
 
-let ourClientsSlider = new Swiper('.our-clients .our-clients-slider', {
+let ourClientsSliderHome = new Swiper('body.home .our-clients .our-clients-slider', {
     init: false,
     loop: true,
     speed: 600,
@@ -359,18 +359,35 @@ let ourClientsSlider = new Swiper('.our-clients .our-clients-slider', {
     slidesPerGroup: 1,
 
     pagination: {
-        el: '.our-clients .our-clients-slider .swiper-pagination',
+        el: 'body.home .our-clients .our-clients-slider .swiper-pagination',
         clickable: true,
     },
 
     debugger: true,
 });
 
+let ourClientsSliderAboutUs = new Swiper('body.about-us .our-clients .our-clients-slider', {
+    init: true,
+    loop: true,
+    speed: 600,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+
+    pagination: {
+        el: 'body.about-us .our-clients .our-clients-slider .swiper-pagination',
+        clickable: true,
+    },
+
+    debugger: true,
+});
+
+
 function ourClientsSliderInit() {
     if (window.matchMedia("(max-width: 600px)").matches) {
-        ourClientsSlider.init();
+        ourClientsSliderHome.init();
     }
 }
+
 
 let ourWorkSlider = new Swiper('body.our-work .header .header-slider', {
     loop: true,

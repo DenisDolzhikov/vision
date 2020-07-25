@@ -315,73 +315,6 @@ body.our-work .works .positioner .list .item:nth-child(5) {
   margin-right: auto;
 }
 
-body.our-work .services {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: red;
-}
-
-body.our-work .services .projects {
-  padding-top: 71px;
-  padding-bottom: 71px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50%;
-  background: #ff4f4a;
-}
-
-body.our-work .services .projects .link {
-  font: 400 2.8rem 'Barlow', sans-serif;
-  color: #ffffff;
-  text-decoration: underline;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-  opacity: 0.6;
-}
-
-body.our-work .services .projects .link:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-
-body.our-work .services .our-services {
-  padding-top: 71px;
-  padding-bottom: 71px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50%;
-  background: #171717;
-}
-
-body.our-work .services .our-services .link {
-  font: 400 2.8rem 'Barlow', sans-serif;
-  color: #ffffff;
-  text-decoration: underline;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-  opacity: 0.6;
-}
-
-body.our-work .services .our-services .link:hover {
-  opacity: 1;
-  text-decoration: none;
-}
-
 @media only screen and (max-width: 1600px) {
   body.our-work .header .header-slider .swiper-slide .positioner {
     padding-left: 5%;
@@ -443,13 +376,6 @@ body.our-work .services .our-services .link:hover {
 }
 
 @media only screen and (max-width: 1300px) {
-  body.our-work .services .projects,
-  body.our-work .services .our-services {
-    padding: 40px 0px;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
   body.our-work .header .header-slider .swiper-slide.slide-3 .slide-bg {
     background: url("../img/our-work-hero-slideshow-03.jpg") 90%/cover no-repeat;
   }
@@ -468,16 +394,6 @@ body.our-work .services .our-services .link:hover {
   }
   body.our-work .works .positioner .list .item {
     margin-bottom: 30px;
-  }
-  body.our-work .services {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body.our-work .services .projects,
-  body.our-work .services .our-services {
-    width: 100%;
   }
 }
 
@@ -562,10 +478,6 @@ body.our-work .services .our-services .link:hover {
   }
   body.our-work .works .positioner .section-title {
     margin-bottom: 50px;
-  }
-  body.our-work .services .projects,
-  body.our-work .services .our-services {
-    padding: 30px 0px;
   }
 }
 /*# sourceMappingURL=our-work.css.map */
