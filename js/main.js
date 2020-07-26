@@ -60,7 +60,7 @@ function pageIs(page) {
     }
 
     if (pageIs('about-us.html')) {
-        parallaxHeaderItems({
+        parallaxHeaderItemsAboutUs({
             elem: document.querySelector('body.about-us .team .list .teammate:nth-child(2)'),
             speed: 0.2
         });
@@ -118,6 +118,24 @@ function pageIs(page) {
             //console.log(scrollTop);
             
             elem.style.transform = `translateY(${scrollTop * -speed}px)`;
+        })
+    }
+
+    function parallaxHeaderItemsAboutUs({
+        elem,
+        speed = 0.1,
+    }) {
+        let elemParent = elem.offsetParent;
+
+        window.addEventListener('scroll', () => {
+            if (window.matchMedia("(min-width: 960px)").matches) {
+                let scrollTop = elemParent.getBoundingClientRect().top;
+                //console.log(scrollTop);
+                
+                elem.style.transform = `translateY(${scrollTop * -speed}px)`;
+            } else {
+                elem.style.transform = `translateY(0px)`
+            }
         })
     }
 
@@ -341,7 +359,7 @@ function pageIs(page) {
         closeButton.addEventListener('click', () => {
             overlay.classList.add('fade-out');
             overlay.classList.remove('fade-in');
-            setTimeout(() => overlay.classList.remove('open'), 300);
+            setTimeout(() => overlay.classList.remove('open'), 400);
             document.body.style.overflowY = '';
         });
 
