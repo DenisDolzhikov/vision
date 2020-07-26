@@ -359,7 +359,7 @@ function pageIs(page) {
         closeButton.addEventListener('click', () => {
             overlay.classList.add('fade-out');
             overlay.classList.remove('fade-in');
-            setTimeout(() => overlay.classList.remove('open'), 400);
+            setTimeout(() => overlay.classList.remove('open'), 250);
             document.body.style.overflowY = '';
         });
 
