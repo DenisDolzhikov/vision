@@ -53,6 +53,10 @@ body.lets-talk {
                     .mail {
                         font: 400 2rem 'Barlow', sans-serif;
                         text-decoration: underline;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
                     }
                 }
 
@@ -112,12 +116,173 @@ body.lets-talk {
     }
 
     .location {
+        padding-top: 210px;
+        padding-bottom: 210px;
+
         .positioner {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             width: 1400px;
             padding: 0px 25px;
             margin: auto;
+
+            .section-title {
+                font-size: 5.3rem;
+                width: 51.5%;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                width: 23.5%;
+
+                .title {
+                    font: 400 2.8rem 'Barlow', sans-serif;
+                    margin-bottom: 21px;
+                }
+
+                .address {
+                    font: 400 1.6rem/3rem 'Barlow', sans-serif;
+                    white-space: pre-line;
+                    color: #444444;
+                    margin-bottom: 17px;
+                }
+
+                .tel {
+                    font: 400 2.4rem 'Barlow', sans-serif;
+                }
+
+                .mail {
+                    font: 400 1.6rem 'Barlow', sans-serif;
+                    text-decoration: underline;
+                    color: #ff4652;
+                    margin-bottom: 75px;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .info:nth-child(3) {
+                padding-left: 2%;
+            }
+
+            .social-bar {
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                width: 48.5%;
+
+                .title {
+                    font: 500 1.2rem 'Barlow Semi Condensed';
+                    text-transform: uppercase;
+                    color: #aaaaaa;
+                    margin-bottom: 30px;
+                }
+
+                .social-list {
+                    display: flex;
+                    font-size: 1.9rem;
+
+                    .item {
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .vacancies {
+        padding-top: 270px;
+        padding-bottom: 205px;
+        background: url('../img/lets-talk-bg.jpg') 100% 100%/640px no-repeat fixed;
+
+        .positioner {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1400px;
+            padding: 0px 30px;
+            margin: auto;
+
+            .section-title {
+                width: 100%;
+                white-space: pre-line;
+                font-size: 5.3rem;
+                margin-bottom: 80px;
+            }
+
+            .col {
+                width: 33.3%;
+
+                .title {
+                    font: 400 2.8rem 'Barlow', sans-serif;
+                    color: #111111;
+                    margin-bottom: 23px;
+                }
+
+                .description {
+                    font: 400 1.6rem/2.6rem 'Barlow', sans-serif;
+                    white-space: pre-line;
+                    color: #444444;
+                    margin-bottom: 40px;
+                }
+
+                .list-title {
+                    font: 500 1.2rem 'Barlow Semi Condensed';
+                    text-transform: uppercase;
+                    letter-spacing: 1.2px;
+                    color: #aaaaaa;
+                    margin-bottom: 27px;
+                }
+
+                .list {
+                    .item {
+                        position: relative;
+                        font: 400 1.6rem 'Barlow', sans-serif;
+                        color: #444444;
+                        margin-bottom: 18px;
+                        padding-left: 8%;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            display: block;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 2%;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            border: 1px solid #3e3e3e;
+                        }
+                    }
+                }
+            }
+
+            .col-2 {
+                padding-left: 1.7%;
+            }
+
+            .col-3 {
+                padding-left: 3.5%;
+            }
+
+            .subscription {
+                display: flex;
+                width: 100%;
+                margin-top: 57px;
+                padding-top: 72px;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid rgba(0,0,0, .25);
+
+                .description {
+                    font: 400 2.4rem/3.4rem 'Barlow', sans-serif;
+                    white-space: pre-line;
+                    color: #444444;
+                }
+            }
         }
     }
 }
@@ -133,6 +298,29 @@ body.lets-talk {
                 }
             }
         }
+
+        .location {
+            .positioner {
+                padding: 0px 35px;
+                width: 100%;
+            }
+        }
+
+        .vacancies {
+            .positioner {
+                width: 100%;
+                padding: 0px 60px;
+                justify-content: space-between;
+
+                .col {
+                    width: 29%;
+
+                    .description {
+                        white-space: normal;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -142,6 +330,33 @@ body.lets-talk {
             .positioner {
                 .contacts-list {
                     width: 90%;
+                }
+            }
+        }
+
+        .location {
+            padding-top: 110px;
+            padding-bottom: 120px;
+
+            .positioner {
+                .section-title {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 70px;
+                }
+
+                .info {
+                    width: 50%;
+                    text-align: center;
+                }
+
+                .info:nth-child(3) {
+                    padding-left: 0;
+                }
+
+                .social-bar {
+                    width: 100%;
+                    align-items: center;
                 }
             }
         }
@@ -183,6 +398,59 @@ body.lets-talk {
                         width: 100%;
                         text-align: center;
                     }
+                }
+            }
+        }
+
+        .vacancies {
+            .positioner {
+                justify-content: center;
+
+                .section-title {
+                    white-space: normal;
+                    text-align: center;
+                }
+
+                .col {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 70px;
+
+                    .title,
+                    .description {
+                        text-align: center;
+                    }
+
+                    .description {
+                        margin-bottom: 35px;
+                    }
+
+                    .list-title {
+                        text-align: center;
+                    }
+
+                    .list {
+                        width: 50%;
+                        align-self: center;
+                    }
+                }
+
+                .col-2,
+                .col-3 {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body.lets-talk {
+        .location {
+            .positioner {
+                .info {
+                    width: 100%;
                 }
             }
         }
