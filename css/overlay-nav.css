@@ -1,0 +1,128 @@
+.overlay-nav {
+  display: none;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  font: 400 2.8rem 'Barlow', sans-serif;
+  z-index: 1000;
+}
+
+.overlay-nav .close-overlay-nav {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  right: 20px;
+  font-size: 1.6rem;
+  color: #aaaaaa;
+  opacity: 0.6;
+}
+
+.overlay-nav .close-overlay-nav:hover {
+  opacity: 1;
+}
+
+.overlay-nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.overlay-nav .menu .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.overlay-nav .menu .list .item {
+  margin-bottom: 31px;
+}
+
+.overlay-nav .menu .list .item:hover {
+  color: #ff3c48;
+}
+
+.overlay-nav.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay-nav.fade-in {
+  -webkit-animation: 0.3s opacityIn;
+          animation: 0.3s opacityIn;
+}
+
+@-webkit-keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay-nav.fade-out {
+  -webkit-animation: 0.3s opacityOut;
+          animation: 0.3s opacityOut;
+}
+
+@-webkit-keyframes opacityOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacityOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .overlay-nav {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .overlay-nav .overlay-nav-wrapper {
+    padding-top: 20%;
+  }
+}
+/*# sourceMappingURL=overlay-nav.css.map */

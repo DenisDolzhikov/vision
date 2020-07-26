@@ -71,7 +71,12 @@ function pageIs(page) {
         });
     }
 
-    progressiveTopOpacity();
+    if (pageIs('lets-talk.html')) {
+        parallaxHeaderItems({
+            elem: document.querySelector('body.lets-talk .contacts .icon-down'),
+            speed: 0.4,
+        });
+    }
 
 
     function parallaxHeaderSquare({
@@ -172,6 +177,8 @@ function pageIs(page) {
         });
     }
 
+    progressiveTopOpacity();
+
     function progressiveTopOpacity() {
         const progressiveScrollOpacityList = document.querySelectorAll('.progressive-scroll-opacity');
 
@@ -232,6 +239,13 @@ function pageIs(page) {
         scrollTopOpacity({
             elem: document.querySelector('body.services .header .description'),
             speed: 0.2,
+        });
+    }
+
+    if (pageIs('lets-talk.html')) {
+        scrollTopOpacity({
+            elem: document.querySelector('body.lets-talk .contacts .icon-down'),
+            speed: 0.3,
         });
     }
 
