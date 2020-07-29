@@ -329,6 +329,19 @@ body.lets-talk .vacancies .positioner .subscription .description {
   color: #444444;
 }
 
+body.lets-talk .vacancies .positioner .subscription .button {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #111), color-stop(50%, #303030), to(#111));
+  background: linear-gradient(90deg, #111 0, #303030 50%, #111 100%);
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body.lets-talk .vacancies .positioner .subscription .button:hover {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #111), color-stop(100%, #303030), color-stop(50%, #111));
+  background: linear-gradient(90deg, #111 0, #303030 100%, #111 50%);
+}
+
 @media only screen and (max-width: 1400px) {
   body.lets-talk .contacts .positioner {
     width: 100%;

@@ -254,6 +254,8 @@ body.about-us {
 
             .section-title {
                 text-align: center;
+                display: flex;
+                justify-content: center;
 
                 .link {
                     font: 400 2.8rem 'Barlow', sans-serif;

@@ -242,6 +242,10 @@ function pageIs(page) {
         });
     }
 
+    if (pageIs('about-us.html')) {
+       
+    }
+
     if (pageIs('lets-talk.html')) {
         scrollTopOpacity({
             elem: document.querySelector('body.lets-talk .contacts .icon-down'),
@@ -307,8 +311,6 @@ function pageIs(page) {
             elem.style.opacity =  1 - opacity;
         })
     }
-
-
 
 
     function scrollBottomOpacity({

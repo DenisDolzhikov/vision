@@ -23,6 +23,7 @@ body.our-work .header .header-slider:hover .button-container {
 body.our-work .header .header-slider .swiper-slide {
   overflow: hidden;
   color: #ffffff;
+  background: #000000;
 }
 
 body.our-work .header .header-slider .swiper-slide .slide-bg {
