@@ -10,9 +10,10 @@ body.lets-talk {
 
     .contacts {
         height: 100vh;
+        display: flex;
+        align-items: center;
         position: relative;
         overflow: hidden;
-        padding-top: 305px;
 
         .positioner {
             display: flex;
@@ -187,6 +188,10 @@ body.lets-talk {
 
                     .item {
                         margin-right: 30px;
+                    }
+
+                    .item:last-child {
+                        margin-right: 0;
                     }
                 }
             }
@@ -414,6 +419,7 @@ body.lets-talk {
                 .col {
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     width: 100%;
                     margin-bottom: 70px;
 
@@ -429,16 +435,33 @@ body.lets-talk {
                     .list-title {
                         text-align: center;
                     }
-
-                    .list {
-                        width: 50%;
-                        align-self: center;
-                    }
                 }
 
                 .col-2,
                 .col-3 {
                     padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    body.lets-talk {
+        .vacancies {
+            padding-bottom: 150px;
+
+            .positioner {
+                .subscription {
+                    margin-top: 0;
+                    flex-direction: column;
+
+                    .description {
+                        white-space: normal;
+                        text-align: center;
+                        margin-bottom: 70px;
+                    }
                 }
             }
         }
@@ -451,6 +474,62 @@ body.lets-talk {
             .positioner {
                 .info {
                     width: 100%;
+                }
+            }
+        }
+
+        .vacancies {
+            padding-top: 180px;
+            padding-bottom: 160px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body.lets-talk {
+        .location {
+            padding-top: 80px;
+            padding-bottom: 90px;
+        }
+
+        .vacancies {
+            padding-top: 120px;
+            padding-bottom: 110px;
+
+            .positioner {
+                padding-left: 20px;
+                padding-right: 20px;
+
+                .section-title {
+                    font-size: 4.5rem;
+                }
+
+                .subscription {
+                    .description {
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    body.lets-talk {
+        .contacts {
+            padding-top: 160px;
+        }
+
+        .location {
+            padding-top: 60px;
+        }
+
+        .vacancies {
+            .positioner {
+                .subscription {
+                    padding-top: 0;
+                    border: none;
+
                 }
             }
         }
