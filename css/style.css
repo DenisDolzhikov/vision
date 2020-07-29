@@ -2040,6 +2040,7 @@ body.our-work .header .header-slider:hover .button-container {
 body.our-work .header .header-slider .swiper-slide {
   overflow: hidden;
   color: #ffffff;
+  background: #000000;
 }
 
 body.our-work .header .header-slider .swiper-slide .slide-bg {
@@ -2862,6 +2863,12 @@ body.about-us .main .quote {
 
 body.about-us .main .quote .section-title {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body.about-us .main .quote .section-title .link {
@@ -3411,6 +3418,541 @@ body.about-us .main .quote .section-title .link:hover {
 @media only screen and (max-width: 320px) {
   .our-clients .positioner .section-title .text::before, .our-clients .positioner .section-title .text::after {
     display: none;
+  }
+}
+
+body.lets-talk .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #ffffff;
+}
+
+body.lets-talk .contacts {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body.lets-talk .contacts .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1400px;
+  margin: auto;
+}
+
+body.lets-talk .contacts .positioner .section-title {
+  font: 600 5.39rem 'Barlow', sans-serif;
+  color: #ff4652;
+  margin-bottom: 75px;
+}
+
+body.lets-talk .contacts .positioner .contacts-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-bottom: 80px;
+}
+
+body.lets-talk .contacts .positioner .contacts-list .person {
+  color: #ffffff;
+}
+
+body.lets-talk .contacts .positioner .contacts-list .person .position {
+  font: 500 12px 'Barlow Semi Condensed';
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  opacity: .45;
+  margin-bottom: 13px;
+}
+
+body.lets-talk .contacts .positioner .contacts-list .person .name {
+  font: 400 2.8rem 'Barlow', sans-serif;
+  margin-bottom: 21px;
+}
+
+body.lets-talk .contacts .positioner .contacts-list .person .mail {
+  font: 400 2rem 'Barlow', sans-serif;
+  text-decoration: underline;
+}
+
+body.lets-talk .contacts .positioner .contacts-list .person .mail:hover {
+  text-decoration: none;
+}
+
+body.lets-talk .contacts .positioner .contacts-list .person:nth-child(1),
+body.lets-talk .contacts .positioner .contacts-list .person:nth-child(3) {
+  width: 30.29%;
+}
+
+body.lets-talk .contacts .positioner .contacts-list .person:nth-child(2) {
+  width: 39.43%;
+  padding-left: 8%;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.lets-talk .contacts .positioner .contacts-list .person:nth-child(3) {
+  padding-left: 7.3%;
+}
+
+body.lets-talk .contacts .positioner .icon-down {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+body.lets-talk .contacts .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+body.lets-talk .contacts .video-bg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.7;
+}
+
+body.lets-talk .contacts .video-bg .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body.lets-talk .location {
+  padding-top: 210px;
+  padding-bottom: 210px;
+}
+
+body.lets-talk .location .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1400px;
+  padding: 0px 25px;
+  margin: auto;
+}
+
+body.lets-talk .location .positioner .section-title {
+  font-size: 5.3rem;
+  width: 51.5%;
+}
+
+body.lets-talk .location .positioner .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 23.5%;
+}
+
+body.lets-talk .location .positioner .info .title {
+  font: 400 2.8rem 'Barlow', sans-serif;
+  margin-bottom: 21px;
+}
+
+body.lets-talk .location .positioner .info .address {
+  font: 400 1.6rem/3rem 'Barlow', sans-serif;
+  white-space: pre-line;
+  color: #444444;
+  margin-bottom: 17px;
+}
+
+body.lets-talk .location .positioner .info .tel {
+  font: 400 2.4rem 'Barlow', sans-serif;
+}
+
+body.lets-talk .location .positioner .info .mail {
+  font: 400 1.6rem 'Barlow', sans-serif;
+  text-decoration: underline;
+  color: #ff4652;
+  margin-bottom: 75px;
+}
+
+body.lets-talk .location .positioner .info .mail:hover {
+  text-decoration: none;
+}
+
+body.lets-talk .location .positioner .info:nth-child(3) {
+  padding-left: 2%;
+}
+
+body.lets-talk .location .positioner .social-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+  width: 48.5%;
+}
+
+body.lets-talk .location .positioner .social-bar .title {
+  font: 500 1.2rem 'Barlow Semi Condensed';
+  text-transform: uppercase;
+  color: #aaaaaa;
+  margin-bottom: 30px;
+}
+
+body.lets-talk .location .positioner .social-bar .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.9rem;
+}
+
+body.lets-talk .location .positioner .social-bar .social-list .item {
+  margin-right: 30px;
+}
+
+body.lets-talk .location .positioner .social-bar .social-list .item:last-child {
+  margin-right: 0;
+}
+
+body.lets-talk .vacancies {
+  padding-top: 270px;
+  padding-bottom: 205px;
+  background: #f8f8f8 url("../img/lets-talk-bg.jpg") 100% 100%/640px no-repeat fixed;
+}
+
+body.lets-talk .vacancies .positioner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1400px;
+  padding: 0px 30px;
+  margin: auto;
+}
+
+body.lets-talk .vacancies .positioner .section-title {
+  width: 100%;
+  white-space: pre-line;
+  font-size: 5.3rem;
+  margin-bottom: 80px;
+}
+
+body.lets-talk .vacancies .positioner .col {
+  width: 33.3%;
+}
+
+body.lets-talk .vacancies .positioner .col .title {
+  font: 400 2.8rem 'Barlow', sans-serif;
+  color: #111111;
+  margin-bottom: 23px;
+}
+
+body.lets-talk .vacancies .positioner .col .description {
+  font: 400 1.6rem/2.6rem 'Barlow', sans-serif;
+  white-space: pre-line;
+  color: #444444;
+  margin-bottom: 40px;
+}
+
+body.lets-talk .vacancies .positioner .col .list-title {
+  font: 500 1.2rem 'Barlow Semi Condensed';
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #aaaaaa;
+  margin-bottom: 27px;
+}
+
+body.lets-talk .vacancies .positioner .col .list .item {
+  position: relative;
+  font: 400 1.6rem 'Barlow', sans-serif;
+  color: #444444;
+  margin-bottom: 18px;
+  padding-left: 8%;
+}
+
+body.lets-talk .vacancies .positioner .col .list .item::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 2%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #3e3e3e;
+}
+
+body.lets-talk .vacancies .positioner .col-2 {
+  padding-left: 1.7%;
+}
+
+body.lets-talk .vacancies .positioner .col-3 {
+  padding-left: 3.5%;
+}
+
+body.lets-talk .vacancies .positioner .subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 57px;
+  padding-top: 72px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+body.lets-talk .vacancies .positioner .subscription .description {
+  font: 400 2.4rem/3.4rem 'Barlow', sans-serif;
+  white-space: pre-line;
+  color: #444444;
+}
+
+body.lets-talk .vacancies .positioner .subscription .button {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #111), color-stop(50%, #303030), to(#111));
+  background: linear-gradient(90deg, #111 0, #303030 50%, #111 100%);
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body.lets-talk .vacancies .positioner .subscription .button:hover {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #111), color-stop(100%, #303030), color-stop(50%, #111));
+  background: linear-gradient(90deg, #111 0, #303030 100%, #111 50%);
+}
+
+@media only screen and (max-width: 1400px) {
+  body.lets-talk .contacts .positioner {
+    width: 100%;
+  }
+  body.lets-talk .contacts .positioner .contacts-list {
+    width: 85%;
+  }
+  body.lets-talk .location .positioner {
+    padding: 0px 35px;
+    width: 100%;
+  }
+  body.lets-talk .vacancies .positioner {
+    width: 100%;
+    padding: 0px 60px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body.lets-talk .vacancies .positioner .col {
+    width: 29%;
+  }
+  body.lets-talk .vacancies .positioner .col .description {
+    white-space: normal;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  body.lets-talk .contacts .positioner .contacts-list {
+    width: 90%;
+  }
+  body.lets-talk .location {
+    padding-top: 110px;
+    padding-bottom: 120px;
+  }
+  body.lets-talk .location .positioner .section-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  body.lets-talk .location .positioner .info {
+    width: 50%;
+    text-align: center;
+  }
+  body.lets-talk .location .positioner .info:nth-child(3) {
+    padding-left: 0;
+  }
+  body.lets-talk .location .positioner .social-bar {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  body.lets-talk .contacts {
+    height: auto;
+    padding-top: 200px;
+    padding-bottom: 120px;
+  }
+  body.lets-talk .contacts .positioner .section-title {
+    margin-bottom: 15px;
+    font-size: 4.3rem;
+  }
+  body.lets-talk .contacts .positioner .contacts-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  body.lets-talk .contacts .positioner .contacts-list .person:nth-child(2) {
+    border-left: initial;
+    border-right: initial;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  body.lets-talk .contacts .positioner .contacts-list .person:nth-child(1),
+  body.lets-talk .contacts .positioner .contacts-list .person:nth-child(2),
+  body.lets-talk .contacts .positioner .contacts-list .person:nth-child(3) {
+    padding: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+  body.lets-talk .vacancies .positioner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body.lets-talk .vacancies .positioner .section-title {
+    white-space: normal;
+    text-align: center;
+  }
+  body.lets-talk .vacancies .positioner .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  body.lets-talk .vacancies .positioner .col .title,
+  body.lets-talk .vacancies .positioner .col .description {
+    text-align: center;
+  }
+  body.lets-talk .vacancies .positioner .col .description {
+    margin-bottom: 35px;
+  }
+  body.lets-talk .vacancies .positioner .col .list-title {
+    text-align: center;
+  }
+  body.lets-talk .vacancies .positioner .col-2,
+  body.lets-talk .vacancies .positioner .col-3 {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body.lets-talk .vacancies {
+    padding-bottom: 150px;
+  }
+  body.lets-talk .vacancies .positioner .subscription {
+    margin-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body.lets-talk .vacancies .positioner .subscription .description {
+    white-space: normal;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body.lets-talk .location .positioner .info {
+    width: 100%;
+  }
+  body.lets-talk .vacancies {
+    padding-top: 180px;
+    padding-bottom: 160px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body.lets-talk .location {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+  body.lets-talk .vacancies {
+    padding-top: 120px;
+    padding-bottom: 110px;
+  }
+  body.lets-talk .vacancies .positioner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body.lets-talk .vacancies .positioner .section-title {
+    font-size: 4.5rem;
+  }
+  body.lets-talk .vacancies .positioner .subscription .description {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  body.lets-talk .contacts {
+    padding-top: 160px;
+  }
+  body.lets-talk .location {
+    padding-top: 60px;
+  }
+  body.lets-talk .vacancies .positioner .subscription {
+    padding-top: 0;
+    border: none;
   }
 }
 
